@@ -137,12 +137,12 @@ TextureImporter:
       name: Fire_WarriorIdle_0
       rect:
         serializedVersion: 2
-        x: 41
-        y: 15
-        width: 29
-        height: 49
+        x: 23
+        y: 0
+        width: 80
+        height: 80
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -159,12 +159,12 @@ TextureImporter:
       name: Fire_WarriorIdle_1
       rect:
         serializedVersion: 2
-        x: 185
+        x: 218
         y: 15
         width: 29
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: Fire_WarriorIdle_2
       rect:
         serializedVersion: 2
-        x: 329
+        x: 362
         y: 15
-        width: 29
+        width: 30
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -203,12 +203,12 @@ TextureImporter:
       name: Fire_WarriorIdle_3
       rect:
         serializedVersion: 2
-        x: 472
+        x: 506
         y: 15
         width: 30
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -225,12 +225,12 @@ TextureImporter:
       name: Fire_WarriorIdle_4
       rect:
         serializedVersion: 2
-        x: 616
+        x: 650
         y: 15
         width: 30
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -247,12 +247,12 @@ TextureImporter:
       name: Fire_WarriorIdle_5
       rect:
         serializedVersion: 2
-        x: 760
+        x: 794
         y: 15
-        width: 30
+        width: 29
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -269,12 +269,12 @@ TextureImporter:
       name: Fire_WarriorIdle_6
       rect:
         serializedVersion: 2
-        x: 905
+        x: 938
         y: 15
         width: 29
         height: 48
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -291,12 +291,12 @@ TextureImporter:
       name: Fire_WarriorIdle_7
       rect:
         serializedVersion: 2
-        x: 1049
+        x: 1082
         y: 15
         width: 29
         height: 49
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -313,7 +313,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 271c9232ae40c6c44b333b69ee54f060
     internalID: 0
     vertices: []
     indices: 
@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fire_WarriorIdle_0: 5296555767818526437
+      Fire_WarriorIdle_1: -8462161318698121764
+      Fire_WarriorIdle_2: -4854555114847267770
+      Fire_WarriorIdle_3: 2665862987858058454
+      Fire_WarriorIdle_4: -7419472474624107056
+      Fire_WarriorIdle_5: 560730608615453070
+      Fire_WarriorIdle_6: -1827391772458822727
+      Fire_WarriorIdle_7: 3696218908798637452
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
