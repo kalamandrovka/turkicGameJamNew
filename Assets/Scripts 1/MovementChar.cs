@@ -114,6 +114,11 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("Jumping", true);
             jumpCount--; // Consume a jump
         }
+        if (isGrounded)
+        {
+            jumpCount = maxJumpCount; // Reset jump count when grounded
+            animator.SetBool("Jumping", false);
+        }
 
     }
 
