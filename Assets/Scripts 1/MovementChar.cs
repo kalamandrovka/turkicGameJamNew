@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class PlayerMovement : MonoBehaviour
 {
+    private CameraShake shake;
+
     public float moveSpeed = 5f;
     public float jumpForce = 12f;
     public Transform groundCheck; // (Optional: can still be used for drawing gizmos)
@@ -39,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+        shake = Camera.main.GetComponent<CameraShake>();
+
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -110,11 +115,6 @@ public class PlayerMovement : MonoBehaviour
             jumpCount--; // Consume a jump
         }
 
-        // Reset the jumping animation when the player is grounded.
-        if (isGrounded)
-        {
-            animator.SetBool("Jumping", false);
-        }
     }
 
     // Remove the CheckGround() method since ground detection is now via collisions.
@@ -138,6 +138,7 @@ public class PlayerMovement : MonoBehaviour
             animator.SetBool("HeavyAttack", true);
             StartCoroutine(ResetHeavyAttack());
             heavyAttackCooldownTimer = heavyAttackCooldown;
+            StartCoroutine(StartShake());
         }
     }
 
@@ -218,7 +219,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
             jumpCount = maxJumpCount; // Reset jump count upon landing
-            animator.SetBool("Jumping", false);
+            
         }
     }
 
@@ -239,5 +240,11 @@ public class PlayerMovement : MonoBehaviour
             Gizmos.color = Color.yellow;
             Gizmos.DrawWireSphere(groundCheck.position, 0.2f);
         }
+    }
+
+    IEnumerator StartShake()
+    {
+        yield return new WaitForSeconds(0.15f);
+        shake.StartCameraShake(0.25f, 0.3f);
     }
 }
