@@ -1382,6 +1382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 564a40ab997e88549a733c999c980526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 1838692090}
   animator: {fileID: 6491913700824822122}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
