@@ -5,8 +5,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
     public float jumpForce = 12f;
-    public Transform groundCheck;
+    public Transform groundCheck; // (Optional: can still be used for drawing gizmos)
     public LayerMask groundLayer;
+
+    // Jump settings: set maximum jump count (for double jump = 2)
+    public int maxJumpCount = 1;
+    private int jumpCount = 0;
 
     // Attack settings
     public float lightAttackDuration = 0.5f;   // How long the light attack bool remains true
@@ -16,8 +20,8 @@ public class PlayerMovement : MonoBehaviour
     // Dash settings
     public float dashSpeed = 15f;
     public float dashDuration = 0.2f;
-    public float dashCooldown = 1.0f; // cooldown time after using all dash charges
-    public int maxDashCharges = 2;    // Number of dash uses allowed in a row without cooldown
+    public float dashCooldown = 1.0f; // Cooldown time after using all dash charges
+    public int maxDashCharges = 2;    // Number of dash uses allowed in a row before recharge
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -39,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Set initial dash charges
+        // Initialize dash charges
         dashCharges = maxDashCharges;
     }
 
@@ -51,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
             heavyAttackCooldownTimer -= Time.deltaTime;
         }
 
-        // If no dash charges remain, count down the recharge timer
+        // Handle dash recharge if all charges are used
         if (dashCharges <= 0)
         {
             dashCooldownTimer -= Time.deltaTime;
@@ -61,10 +65,11 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        CheckGround();
+        // The ground check is now performed via collision events.
+        // (Previously, CheckGround() using OverlapCircle was called here.)
+
         HandleDash(); // Process dash input
 
-        // Only allow normal movement if not currently dashing
         if (!isDashing)
         {
             HandleMovement();
@@ -90,23 +95,30 @@ public class PlayerMovement : MonoBehaviour
             spriteRenderer.flipX = false;
         }
 
-        // Update walking animation parameter (use a float parameter "Walking" to indicate speed)
+        // Update walking animation parameter (using a float parameter "Walking")
         animator.SetFloat("Walking", Mathf.Abs(moveInput));
     }
 
+    // Updated Jumping: Allow exactly two jumps (initial jump + one mid-air jump)
     void HandleJump()
     {
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        // When jump is pressed and jumps remain, perform a jump.
+        if (Input.GetButtonDown("Jump") && jumpCount > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            animator.SetTrigger("Jump");
+            animator.SetBool("Jumping", true);
+            jumpCount--; // Consume a jump
+        }
+
+        // Reset the jumping animation when the player is grounded.
+        if (isGrounded)
+        {
+            animator.SetBool("Jumping", false);
         }
     }
 
-    void CheckGround()
-    {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-    }
+    // Remove the CheckGround() method since ground detection is now via collisions.
+    // If you still want to display the groundCheck position in the Editor, you may leave OnDrawGizmosSelected().
 
     void HandleAttack()
     {
@@ -118,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(ResetAttack("LightAttack", lightAttackDuration));
         }
 
-        // Heavy attack: triggered by pressing K if available
+        // Heavy attack: triggered by pressing K if not on cooldown and not already active
         if (Input.GetKeyDown(KeyCode.K) && heavyAttackCooldownTimer <= 0f && !heavyAttackActive)
         {
             Debug.Log("Heavy attack triggered.");
@@ -129,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // Coroutine to reset the light attack bool after a set duration
+    // Coroutine to reset an attack bool after a set duration
     IEnumerator ResetAttack(string attackType, float duration)
     {
         yield return new WaitForSeconds(duration);
@@ -137,7 +149,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(attackType + " reset after " + duration + " seconds.");
     }
 
-    // Coroutine for heavy attack: waits until the heavy attack animation finishes before resetting
+    // Coroutine for heavy attack: waits until the heavy attack animation finishes, then resets
     IEnumerator ResetHeavyAttack()
     {
         while (true)
@@ -154,16 +166,13 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("HeavyAttack reset after animation finished.");
     }
 
-    // Dash handled with SetBool ("Dash") parameter
+    // Dash using SetBool ("Dash") parameter with 2 charges in a row before cooldown
     void HandleDash()
     {
-        // Check if the dash key is pressed (Left Shift) and if we have dash charges
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && dashCharges > 0)
         {
             Debug.Log("Dash triggered.");
-            // Consume one dash charge
-            dashCharges--;
-            // If all charges are used, start the dash recharge timer
+            dashCharges--; // Consume one dash charge
             if (dashCharges <= 0)
             {
                 dashCooldownTimer = dashCooldown;
@@ -177,23 +186,21 @@ public class PlayerMovement : MonoBehaviour
     {
         isDashing = true;
 
-        // Determine dash direction using horizontal input; if no input, use sprite orientation
+        // Determine dash direction: use horizontal input if available; otherwise, use sprite's orientation
         float dashDirection = Input.GetAxisRaw("Horizontal");
         if (dashDirection == 0)
         {
             dashDirection = spriteRenderer.flipX ? -1 : 1;
         }
 
-        // Set dash velocity
+        // Apply dash velocity
         rb.linearVelocity = new Vector2(dashDirection * dashSpeed, rb.linearVelocity.y);
-
         yield return new WaitForSeconds(dashDuration);
 
         isDashing = false;
         animator.SetBool("Dash", false);
-        // Optional: Reset horizontal velocity once dash is over
+        // Optionally, reset horizontal velocity after dash
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
-
         Debug.Log("Dash finished.");
     }
 
@@ -202,6 +209,29 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsGrounded", isGrounded);
     }
 
+    // New collision-based ground detection below:
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Check if the collided object is on the groundLayer using bit masking.
+        if ((groundLayer.value & (1 << collision.gameObject.layer)) != 0)
+        {
+            isGrounded = true;
+            jumpCount = maxJumpCount; // Reset jump count upon landing
+            animator.SetBool("Jumping", false);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        // If leaving a collision with an object on the groundLayer, update isGrounded.
+        if ((groundLayer.value & (1 << collision.gameObject.layer)) != 0)
+        {
+            isGrounded = false;
+        }
+    }
+
+    // Optional: Draw the groundCheck sphere in the editor for visualization.
     private void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
