@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BG-ruins_0: 7698617388996889758
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
