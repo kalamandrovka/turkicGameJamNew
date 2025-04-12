@@ -22,7 +22,6 @@ public class EnemyHealth : MonoBehaviour
         {
             animator.SetBool("Die", true);
             StartCoroutine(DieAnimator());
-            
         }
     }
     IEnumerator NoHurt()
