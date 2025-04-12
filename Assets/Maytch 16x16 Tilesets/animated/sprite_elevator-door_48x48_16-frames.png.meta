@@ -359,7 +359,17 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprite_elevator-door_48x48_16-frames_0: 2005231035090549265
+      sprite_elevator-door_48x48_16-frames_1: -4889020418421246065
+      sprite_elevator-door_48x48_16-frames_2: 1367573654049091565
+      sprite_elevator-door_48x48_16-frames_3: 8096400628205879464
+      sprite_elevator-door_48x48_16-frames_4: 6193154037490878261
+      sprite_elevator-door_48x48_16-frames_5: -4996096140767155498
+      sprite_elevator-door_48x48_16-frames_6: -130235585614906607
+      sprite_elevator-door_48x48_16-frames_7: -6452423222025224760
+      sprite_elevator-door_48x48_16-frames_8: -3159096590363729007
+      sprite_elevator-door_48x48_16-frames_9: -6874768769476086970
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprite_dungeon-gate_32x32_8-frames_0: -4903981464810712166
+      sprite_dungeon-gate_32x32_8-frames_1: 5716560105439316403
+      sprite_dungeon-gate_32x32_8-frames_2: 1105943979182362236
+      sprite_dungeon-gate_32x32_8-frames_3: -1163625648139378902
+      sprite_dungeon-gate_32x32_8-frames_4: -8566272753643956293
+      sprite_dungeon-gate_32x32_8-frames_5: 6704189494791584995
+      sprite_dungeon-gate_32x32_8-frames_6: 1698857407717218700
+      sprite_dungeon-gate_32x32_8-frames_7: 5303082381342807774
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
