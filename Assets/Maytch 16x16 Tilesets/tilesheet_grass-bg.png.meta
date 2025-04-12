@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tilesheet_grass-bg_0: -4541367524507258674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

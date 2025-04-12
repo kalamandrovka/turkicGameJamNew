@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tile_water-light-still_16x16-4-frames_0: 7906377294665325486
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

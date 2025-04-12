@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tile_goo2_16x16_16-frames_0: -2726393002254646531
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

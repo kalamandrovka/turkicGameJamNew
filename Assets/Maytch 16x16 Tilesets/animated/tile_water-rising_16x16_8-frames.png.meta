@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tile_water-rising_16x16_8-frames_0: -6474275620291466238
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

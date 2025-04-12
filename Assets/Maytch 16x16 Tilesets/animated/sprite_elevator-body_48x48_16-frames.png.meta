@@ -509,7 +509,23 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprite_elevator-body_48x48_16-frames_0: 5084133549485065258
+      sprite_elevator-body_48x48_16-frames_1: -4940365980611880097
+      sprite_elevator-body_48x48_16-frames_10: -8035251165426084347
+      sprite_elevator-body_48x48_16-frames_11: -7107970506182475853
+      sprite_elevator-body_48x48_16-frames_12: 6794757740830281980
+      sprite_elevator-body_48x48_16-frames_13: -7702773559953779568
+      sprite_elevator-body_48x48_16-frames_14: 3115534755025009378
+      sprite_elevator-body_48x48_16-frames_15: -621102592534034303
+      sprite_elevator-body_48x48_16-frames_2: 4879109311933593086
+      sprite_elevator-body_48x48_16-frames_3: 8288438529366327498
+      sprite_elevator-body_48x48_16-frames_4: 6525497962186690094
+      sprite_elevator-body_48x48_16-frames_5: 2637018915306378300
+      sprite_elevator-body_48x48_16-frames_6: -4403383325468847733
+      sprite_elevator-body_48x48_16-frames_7: -335659959286568340
+      sprite_elevator-body_48x48_16-frames_8: -4458322882770989398
+      sprite_elevator-body_48x48_16-frames_9: 8754703669510034134
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

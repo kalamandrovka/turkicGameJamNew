@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprite_pagoda-doors-3_32x16_6-frames_0: 5822431077779801381
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

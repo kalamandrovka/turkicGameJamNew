@@ -309,7 +309,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      sprite_dungeon-light_16x16_8-frames_0: -8557889839832365373
+      sprite_dungeon-light_16x16_8-frames_1: 41786484450976307
+      sprite_dungeon-light_16x16_8-frames_2: 6928333528449223683
+      sprite_dungeon-light_16x16_8-frames_3: -4847167855979094957
+      sprite_dungeon-light_16x16_8-frames_4: -1116711985046339222
+      sprite_dungeon-light_16x16_8-frames_5: 3011509486252592043
+      sprite_dungeon-light_16x16_8-frames_6: 5596040986686094406
+      sprite_dungeon-light_16x16_8-frames_7: -7153733007907522561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

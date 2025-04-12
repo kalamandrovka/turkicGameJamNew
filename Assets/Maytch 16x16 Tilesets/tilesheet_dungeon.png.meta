@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tilesheet_dungeon_0: -7544252760859629570
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

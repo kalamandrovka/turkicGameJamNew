@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      tile_water-still_16x16_4-frames_0: 7161918725576412547
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
