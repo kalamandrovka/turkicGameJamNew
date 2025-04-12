@@ -184,7 +184,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      violetcave_tileset_0: 928260371133906381
+      violetcave_tileset_1: -8175681853908700694
+      violetcave_tileset_2: 5715186191381794247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -159,7 +159,9 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bluecave_tileset_0: -8759861555885540304
+      bluecave_tileset_1: 1520584060881365249
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
