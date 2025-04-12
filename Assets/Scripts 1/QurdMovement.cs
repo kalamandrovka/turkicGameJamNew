@@ -1,116 +1,174 @@
 using UnityEngine;
 using System.Collections;
 
-public class QurdController : MonoBehaviour
+public class WolfController : MonoBehaviour
 {
-    [Header("Movement Settings")]
-    public float moveSpeed = 3f;       // Horizontal movement speed
-    public float jumpForce = 10f;      // Jump impulse force
+    // ------------------------------
+    // Patrol Settings
+    // ------------------------------
+    public Transform pointA;   // Patrol point A.
+    public Transform pointB;   // Patrol point B.
+    public float patrolSpeed = 2f;
 
-    [Header("Ground Check")]
-    public Transform groundCheck;      // Position used for checking ground
-    public LayerMask groundLayer;      // Which layers constitute the ground
+    // ------------------------------
+    // Chase & Attack Settings
+    // ------------------------------
+    public float chaseSpeed = 4f;
+    public float senseRange = 5f;    // Distance at which the wolf detects the player.
+    public float attackRange = 1.5f; // Range within which the wolf attacks.
+    public float attackCooldown = 1f; // Delay between attacks.
 
-    [Header("Animation Settings")]
-    // These parameters are expected to match the ones in the Animator.
-    // For example, a float parameter "Speed" and triggers "Jump", "Attack", "Die"
+    // ------------------------------
+    // Jumping Settings
+    // ------------------------------
+    public float jumpForce = 7f;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
 
-    [Header("Attack Settings")]
-    public float attackCooldown = 1f;  // Time between attacks
-    private float attackTimer = 0f;
-    private bool isAttacking = false;
+    // ------------------------------
+    // Health (Hit Count)
+    // ------------------------------
+    private int hitCount = 0;       // Number of hits taken.
+    private int hitLimit = 2;       // Wolf dies after 2 hits.
+
+    // ------------------------------
+    // References
+    // ------------------------------
+    public Transform player;  // Reference to the player's Transform.
 
     private Rigidbody2D rb;
     private Animator animator;
+    private bool isFacingRight = true;  // Tracks the wolf's facing direction.
 
-    // Track whether Qurd is on the ground
-    private bool isGrounded;
+    // Internal state variables.
+    private Vector3 currentPatrolTarget;
+    private bool isAttacking = false;
+    private bool isDead = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        currentPatrolTarget = pointA.position;  // Start patrol at point A.
     }
 
     void Update()
     {
-        // If Qurd is dying, don't process other movement/attacks.
-        // (Dying logic can disable further control.)
+        if (isDead)
+            return;
 
-        // Update timers
-        if (attackTimer > 0f)
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+        // When player is sensed...
+        if (distanceToPlayer <= senseRange)
         {
-            attackTimer -= Time.deltaTime;
+            if (distanceToPlayer > attackRange)
+            {
+                ChasePlayer();
+                // Optional: jump if the player is higher.
+                if (player.position.y > transform.position.y + 0.5f && IsGrounded())
+                    Jump();
+            }
+            else
+            {
+                if (!isAttacking)
+                    StartCoroutine(Attack());
+            }
         }
-
-        // Perform a simple ground check using an OverlapCircle.
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
-
-        // Process movement input.
-        // (For an enemy AI, replace these Input calls with your movement logic.)
-        float horizontal = Input.GetAxis("Horizontal");
-
-        // Update horizontal velocity (we use rb.velocity for a 2D physics-based approach).
-        rb.linearVelocity = new Vector2(horizontal * moveSpeed, rb.linearVelocity.y);
-
-        // Update the animation "Speed" parameter to switch between idle and run.
-        animator.SetFloat("Speed", Mathf.Abs(horizontal));
-
-        // Flip Qurd's sprite horizontally if needed (assuming left-facing is default).
-        if (horizontal < 0)
+        else
         {
-            transform.localScale = new Vector3(-1, 1, 1);
-        }
-        else if (horizontal > 0)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-        }
-
-        // Jumping logic:
-        // We check that Qurd is on the ground and the jump button was pressed.
-        if (isGrounded && Input.GetButtonDown("Jump"))
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            // Trigger the jump animation.
-            animator.SetTrigger("Jump");
-        }
-
-        // Attack logic:
-        // Here we use a key (e.g. "J") to trigger an attack.
-        // When integrating with AI, you might call the Attack() method directly.
-        if (!isAttacking && attackTimer <= 0f && Input.GetKeyDown(KeyCode.J))
-        {
-            StartCoroutine(Attack());
+            Patrol();
         }
     }
 
-    // Example coroutine to manage attack timing and animation.
+    // Patrolling between point A and B.
+    void Patrol()
+    {
+        Vector3 direction = (currentPatrolTarget - transform.position).normalized;
+        rb.linearVelocity = new Vector2(direction.x * patrolSpeed, rb.linearVelocity.y);
+
+        if (direction.x > 0 && !isFacingRight)
+            Flip();
+        else if (direction.x < 0 && isFacingRight)
+            Flip();
+
+        animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
+
+        // Switch target when close to current one.
+        if (Vector2.Distance(transform.position, currentPatrolTarget) < 0.2f)
+        {
+            currentPatrolTarget = (currentPatrolTarget == pointA.position) ? pointB.position : pointA.position;
+        }
+    }
+
+    // Chasing the player.
+    void ChasePlayer()
+    {
+        Vector3 direction = (player.position - transform.position).normalized;
+        rb.linearVelocity = new Vector2(direction.x * chaseSpeed, rb.linearVelocity.y);
+
+        if (direction.x > 0 && !isFacingRight)
+            Flip();
+        else if (direction.x < 0 && isFacingRight)
+            Flip();
+
+        animator.SetFloat("Speed", Mathf.Abs(rb.linearVelocity.x));
+    }
+
     IEnumerator Attack()
     {
         isAttacking = true;
-        // Trigger the attack animation.
+        rb.linearVelocity = Vector2.zero; // Stop moving to attack.
         animator.SetTrigger("Attack");
-
-        // (Optional) Wait for the attack animation duration:
-        // You might replace this with an animation event instead.
+        // (Optional: add damage logic to affect the player.)
         yield return new WaitForSeconds(attackCooldown);
         isAttacking = false;
-        attackTimer = attackCooldown;
     }
 
-    // When Qurd dies, call this method to trigger the death animation and disable further control.
-    public void Die()
+    void Jump()
     {
-        // Trigger the death animation.
-        animator.SetTrigger("Die");
-        // Disable physics so Qurd stops moving.
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        animator.SetTrigger("Jump");
+    }
+
+    bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    // ------------------------------
+    // Health Functions (Hit Count)
+    // ------------------------------
+    public void TakeHit()
+    {
+        hitCount++;
+        Debug.Log("Wolf hit! Total hits: " + hitCount);
+        if (hitCount >= hitLimit)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        isDead = true;
         rb.linearVelocity = Vector2.zero;
-        // Optionally disable further script activity (or the collider) here.
+        animator.SetTrigger("Die");
+        // Optionally disable further AI actions.
         this.enabled = false;
     }
 
-    // Optional: Visualize the groundCheck sphere in the Unity Editor
-    private void OnDrawGizmosSelected()
+    // Flip the wolf's facing direction.
+    void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        Vector3 newScale = transform.localScale;
+        newScale.x *= -1;
+        transform.localScale = newScale;
+    }
+
+    // Optional: Visualize groundCheck area.
+    void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
         {

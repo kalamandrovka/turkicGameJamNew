@@ -1,30 +1,52 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-
-public class PlayerMovement : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
+    // ------------------------------
+    // Health (Hit Count) Settings
+    // ------------------------------
+    private int hitCount = 0;      // Number of hits taken
+    private int hitLimit = 5;      // Player dies at 5 hits
+
+    // ------------------------------
+    // Camera Shake Reference
+    // ------------------------------
     private CameraShake shake;
 
+    // ------------------------------
+    // Movement Settings
+    // ------------------------------
     public float moveSpeed = 5f;
     public float jumpForce = 12f;
-    public Transform groundCheck; // (Optional: can still be used for drawing gizmos)
+    public Transform groundCheck; // (Optional: used for visualizing ground detection)
     public LayerMask groundLayer;
 
-    // Jump settings: set maximum jump count (for double jump = 2)
+    // Jumping: (maxJumpCount = 1 means a single jump)
     public int maxJumpCount = 1;
     private int jumpCount = 0;
 
-    // Attack settings
-    public float lightAttackDuration = 0.5f;   // How long the light attack bool remains true
-    public float heavyAttackDuration = 1.0f;     // How long the heavy attack bool remains true
-    public float heavyAttackCooldown = 1.0f;     // Cooldown duration for heavy attack
+    // ------------------------------
+    // Attack Settings
+    // ------------------------------
+    public float lightAttackDuration = 0.5f;
+    public float heavyAttackDuration = 1.0f;
+    public float heavyAttackCooldown = 1.0f;
 
-    // Dash settings
+    // The attack ranges are used to check if an enemy is close enough.
+    public float lightAttackRange = 0.55f;
+    public float heavyAttackRange = 1f;
+
+    public int lightAttackDamage = 1;
+    public int heavyAttackDamage = 2;
+
+    // ------------------------------
+    // Dash Settings
+    // ------------------------------
     public float dashSpeed = 15f;
     public float dashDuration = 0.2f;
-    public float dashCooldown = 1.0f; // Cooldown time after using all dash charges
-    public int maxDashCharges = 2;    // Number of dash uses allowed in a row before recharge
+    public float dashCooldown = 1.0f;
+    public int maxDashCharges = 2;
 
     private Rigidbody2D rb;
     private bool isGrounded;
@@ -48,37 +70,26 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        // Initialize dash charges
         dashCharges = maxDashCharges;
     }
 
     void Update()
     {
-        // Update heavy attack cooldown timer
+        // Update heavy attack cooldown timer.
         if (heavyAttackCooldownTimer > 0f)
-        {
             heavyAttackCooldownTimer -= Time.deltaTime;
-        }
 
-        // Handle dash recharge if all charges are used
+        // Recharge dash charges.
         if (dashCharges <= 0)
         {
             dashCooldownTimer -= Time.deltaTime;
             if (dashCooldownTimer <= 0f)
-            {
                 dashCharges = maxDashCharges;
-            }
         }
 
-        // The ground check is now performed via collision events.
-        // (Previously, CheckGround() using OverlapCircle was called here.)
-
-        HandleDash(); // Process dash input
-
+        HandleDash();
         if (!isDashing)
-        {
             HandleMovement();
-        }
 
         HandleJump();
         HandleAttack();
@@ -90,64 +101,78 @@ public class PlayerMovement : MonoBehaviour
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-        // Mirror the sprite when moving left
+        // Flip sprite based on input direction.
         if (moveInput < 0)
-        {
             spriteRenderer.flipX = true;
-        }
         else if (moveInput > 0)
-        {
             spriteRenderer.flipX = false;
-        }
 
-        // Update walking animation parameter (using a float parameter "Walking")
         animator.SetFloat("Walking", Mathf.Abs(moveInput));
     }
 
-    // Updated Jumping: Allow exactly two jumps (initial jump + one mid-air jump)
     void HandleJump()
     {
-        // When jump is pressed and jumps remain, perform a jump.
+        // If jump button is pressed and jumps remain, jump.
         if (Input.GetButtonDown("Jump") && jumpCount > 0)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             animator.SetBool("Jumping", true);
-            jumpCount--; // Consume a jump
+            jumpCount--; // Consume a jump.
         }
+
+        // When grounded, reset the jump counter and clear the jump animation.
         if (isGrounded)
         {
-            jumpCount = maxJumpCount; // Reset jump count when grounded
+            jumpCount = maxJumpCount;
             animator.SetBool("Jumping", false);
         }
-
     }
 
-    // Remove the CheckGround() method since ground detection is now via collisions.
-    // If you still want to display the groundCheck position in the Editor, you may leave OnDrawGizmosSelected().
-
+    // Attack logic now checks for key presses and then finds an enemy (by tag "Enemy")
+    // that is within range. If one is found, it applies one hit.
     void HandleAttack()
     {
-        // Light attack: triggered by pressing J
+        // Light attack with "J" key.
         if (Input.GetKeyDown(KeyCode.J))
         {
             Debug.Log("Light attack triggered.");
             animator.SetBool("LightAttack", true);
+            DamageEnemy(lightAttackRange,lightAttackDamage);
             StartCoroutine(ResetAttack("LightAttack", lightAttackDuration));
         }
 
-        // Heavy attack: triggered by pressing K if not on cooldown and not already active
+        // Heavy attack with "K" key.
         if (Input.GetKeyDown(KeyCode.K) && heavyAttackCooldownTimer <= 0f && !heavyAttackActive)
         {
             Debug.Log("Heavy attack triggered.");
             heavyAttackActive = true;
             animator.SetBool("HeavyAttack", true);
+            DamageEnemy(heavyAttackRange, heavyAttackDamage);
             StartCoroutine(ResetHeavyAttack());
             heavyAttackCooldownTimer = heavyAttackCooldown;
             StartCoroutine(StartShake());
         }
     }
 
-    // Coroutine to reset an attack bool after a set duration
+    // Searches for an enemy in range (using the given range parameter) and, if found,
+    // applies one hit.
+    void DamageEnemy(float range, int damage)
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            if (Vector2.Distance(transform.position, enemy.transform.position) <= range)
+            {
+                EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+                if (enemyHealth != null)
+                {
+                    enemyHealth.TakeDamage(damage); // Apply one hit (damage=1).
+                }
+                break; // Only hit one enemy per attack.
+            }
+        }
+    }
+
     IEnumerator ResetAttack(string attackType, float duration)
     {
         yield return new WaitForSeconds(duration);
@@ -155,16 +180,13 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(attackType + " reset after " + duration + " seconds.");
     }
 
-    // Coroutine for heavy attack: waits until the heavy attack animation finishes, then resets
     IEnumerator ResetHeavyAttack()
     {
         while (true)
         {
             AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
             if (state.IsName("HeavyAttack") && state.normalizedTime >= 1.0f)
-            {
                 break;
-            }
             yield return null;
         }
         animator.SetBool("HeavyAttack", false);
@@ -172,17 +194,14 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("HeavyAttack reset after animation finished.");
     }
 
-    // Dash using SetBool ("Dash") parameter with 2 charges in a row before cooldown
     void HandleDash()
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && dashCharges > 0)
         {
             Debug.Log("Dash triggered.");
-            dashCharges--; // Consume one dash charge
+            dashCharges--; // Use one dash charge.
             if (dashCharges <= 0)
-            {
                 dashCooldownTimer = dashCooldown;
-            }
             animator.SetBool("Dash", true);
             StartCoroutine(PerformDash());
         }
@@ -191,21 +210,13 @@ public class PlayerMovement : MonoBehaviour
     IEnumerator PerformDash()
     {
         isDashing = true;
-
-        // Determine dash direction: use horizontal input if available; otherwise, use sprite's orientation
         float dashDirection = Input.GetAxisRaw("Horizontal");
         if (dashDirection == 0)
-        {
             dashDirection = spriteRenderer.flipX ? -1 : 1;
-        }
-
-        // Apply dash velocity
         rb.linearVelocity = new Vector2(dashDirection * dashSpeed, rb.linearVelocity.y);
         yield return new WaitForSeconds(dashDuration);
-
         isDashing = false;
         animator.SetBool("Dash", false);
-        // Optionally, reset horizontal velocity after dash
         rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
         Debug.Log("Dash finished.");
     }
@@ -215,29 +226,23 @@ public class PlayerMovement : MonoBehaviour
         animator.SetBool("IsGrounded", isGrounded);
     }
 
-    // New collision-based ground detection below:
-
+    // Ground detection using collision events.
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if the collided object is on the groundLayer using bit masking.
         if ((groundLayer.value & (1 << collision.gameObject.layer)) != 0)
         {
             isGrounded = true;
-            jumpCount = maxJumpCount; // Reset jump count upon landing
-            
+            jumpCount = maxJumpCount;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        // If leaving a collision with an object on the groundLayer, update isGrounded.
         if ((groundLayer.value & (1 << collision.gameObject.layer)) != 0)
-        {
             isGrounded = false;
-        }
     }
 
-    // Optional: Draw the groundCheck sphere in the editor for visualization.
+    // Optional: Visualize the groundCheck area.
     private void OnDrawGizmosSelected()
     {
         if (groundCheck != null)
@@ -251,5 +256,27 @@ public class PlayerMovement : MonoBehaviour
     {
         yield return new WaitForSeconds(0.15f);
         shake.StartCameraShake(0.25f, 0.3f);
+    }
+
+    // ------------------------------
+    // Health Functions (Hit Count)
+    // ------------------------------
+    public void TakeHit()
+    {
+        hitCount++;
+        Debug.Log("Player hit! Total hits: " + hitCount);
+        if (hitCount >= hitLimit)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("Player died!");
+        animator.SetTrigger("Die");
+        rb.linearVelocity = Vector2.zero;
+        // Optionally disable further control/input here.
+        this.enabled = false;
     }
 }
