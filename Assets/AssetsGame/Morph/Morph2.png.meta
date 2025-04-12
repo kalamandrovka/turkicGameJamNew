@@ -1,0 +1,3005 @@
+fileFormatVersion: 2
+guid: e9630f172d293f245ba8a4fe9bc03d62
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2561554047289123354
+    second: Morph2_0
+  - first:
+      213: -4930096979108875621
+    second: Morph2_1
+  - first:
+      213: 7728877149357610210
+    second: Morph2_2
+  - first:
+      213: 7879871875290930427
+    second: Morph2_3
+  - first:
+      213: -8979330421784807424
+    second: Morph2_4
+  - first:
+      213: -7967487078100049745
+    second: Morph2_5
+  - first:
+      213: 2959551690260264575
+    second: Morph2_6
+  - first:
+      213: 6340746958205794796
+    second: Morph2_7
+  - first:
+      213: -1952448247259983004
+    second: Morph2_8
+  - first:
+      213: 7570227673169137194
+    second: Morph2_9
+  - first:
+      213: 4009612952956696766
+    second: Morph2_10
+  - first:
+      213: 7303326853659924554
+    second: Morph2_11
+  - first:
+      213: -8252137653620537739
+    second: Morph2_12
+  - first:
+      213: 2672302939535016322
+    second: Morph2_13
+  - first:
+      213: -2976865167298385635
+    second: Morph2_14
+  - first:
+      213: 7021055322464784489
+    second: Morph2_15
+  - first:
+      213: -4908698202389694367
+    second: Morph2_16
+  - first:
+      213: 7154514651263152995
+    second: Morph2_17
+  - first:
+      213: 8064410854331115375
+    second: Morph2_18
+  - first:
+      213: -3805480676619019698
+    second: Morph2_19
+  - first:
+      213: -122937411094481810
+    second: Morph2_20
+  - first:
+      213: 6292452444889556481
+    second: Morph2_21
+  - first:
+      213: -7790173887354465553
+    second: Morph2_22
+  - first:
+      213: 2335805786509090474
+    second: Morph2_23
+  - first:
+      213: -3147687213380178643
+    second: Morph2_24
+  - first:
+      213: 7140582212817790157
+    second: Morph2_25
+  - first:
+      213: -5465835648584392904
+    second: Morph2_26
+  - first:
+      213: -8922947596468472953
+    second: Morph2_27
+  - first:
+      213: 3104667694613665678
+    second: Morph2_28
+  - first:
+      213: 3495692836977729676
+    second: Morph2_29
+  - first:
+      213: 827243855897039242
+    second: Morph2_30
+  - first:
+      213: -4161549037498454899
+    second: Morph2_31
+  - first:
+      213: 5595525398948759143
+    second: Morph2_32
+  - first:
+      213: -1029219313300296113
+    second: Morph2_33
+  - first:
+      213: -5488147764966403266
+    second: Morph2_34
+  - first:
+      213: -909662858665591414
+    second: Morph2_35
+  - first:
+      213: 3577075133474726875
+    second: Morph2_36
+  - first:
+      213: -5970722973957718110
+    second: Morph2_37
+  - first:
+      213: 576903515667667767
+    second: Morph2_38
+  - first:
+      213: -5784538204213987615
+    second: Morph2_39
+  - first:
+      213: 4709743282391925255
+    second: Morph2_40
+  - first:
+      213: 3587826009564938991
+    second: Morph2_41
+  - first:
+      213: -6078714534077502860
+    second: Morph2_42
+  - first:
+      213: -2661041092935136470
+    second: Morph2_43
+  - first:
+      213: -1018565856196783648
+    second: Morph2_44
+  - first:
+      213: -4006140923890646917
+    second: Morph2_45
+  - first:
+      213: -7692993362963270445
+    second: Morph2_46
+  - first:
+      213: 6929645860268008494
+    second: Morph2_47
+  - first:
+      213: 8305954409947900716
+    second: Morph2_48
+  - first:
+      213: 8611625386695889446
+    second: Morph2_49
+  - first:
+      213: -3970498585531140570
+    second: Morph2_50
+  - first:
+      213: 3793118128041118391
+    second: Morph2_51
+  - first:
+      213: 5144258645470038175
+    second: Morph2_52
+  - first:
+      213: -7262471170042710661
+    second: Morph2_53
+  - first:
+      213: 7946518083929480598
+    second: Morph2_54
+  - first:
+      213: -3146819237609286183
+    second: Morph2_55
+  - first:
+      213: -7170966801940966425
+    second: Morph2_56
+  - first:
+      213: -2537475906202264261
+    second: Morph2_57
+  - first:
+      213: -4635592575756351901
+    second: Morph2_58
+  - first:
+      213: -7224995081576528747
+    second: Morph2_59
+  - first:
+      213: 2867581015714758861
+    second: Morph2_60
+  - first:
+      213: -6253300216640029953
+    second: Morph2_61
+  - first:
+      213: -8938769189308765809
+    second: Morph2_62
+  - first:
+      213: -7476011365384570130
+    second: Morph2_63
+  - first:
+      213: 8496958610110967031
+    second: Morph2_64
+  - first:
+      213: 6966368097092897576
+    second: Morph2_65
+  - first:
+      213: 4173653777847986364
+    second: Morph2_66
+  - first:
+      213: -1095954439415852896
+    second: Morph2_67
+  - first:
+      213: 2106194246479143735
+    second: Morph2_68
+  - first:
+      213: -8812714208900232790
+    second: Morph2_69
+  - first:
+      213: -8436097371703333424
+    second: Morph2_70
+  - first:
+      213: 2819769439768065160
+    second: Morph2_71
+  - first:
+      213: 4997214080879822343
+    second: Morph2_72
+  - first:
+      213: 5862160350289865947
+    second: Morph2_73
+  - first:
+      213: 8022217419762606102
+    second: Morph2_74
+  - first:
+      213: -4963383203280953659
+    second: Morph2_75
+  - first:
+      213: 5405029451087523126
+    second: Morph2_76
+  - first:
+      213: -2920208837199008960
+    second: Morph2_77
+  - first:
+      213: 457556842671069994
+    second: Morph2_78
+  - first:
+      213: 507470768445192168
+    second: Morph2_79
+  - first:
+      213: -7729708136053245446
+    second: Morph2_80
+  - first:
+      213: -5419762075871391031
+    second: Morph2_81
+  - first:
+      213: 3570800768455925782
+    second: Morph2_82
+  - first:
+      213: -2147513144893685852
+    second: Morph2_83
+  - first:
+      213: 238030802533322617
+    second: Morph2_84
+  - first:
+      213: -2825980023129399899
+    second: Morph2_85
+  - first:
+      213: 892715182308858570
+    second: Morph2_86
+  - first:
+      213: -6133868088816597121
+    second: Morph2_87
+  - first:
+      213: -4851496166883070922
+    second: Morph2_88
+  - first:
+      213: -1088452769657637099
+    second: Morph2_89
+  - first:
+      213: 8586056593173949977
+    second: Morph2_90
+  - first:
+      213: -1543659830969003354
+    second: Morph2_91
+  - first:
+      213: -4492469889176080739
+    second: Morph2_92
+  - first:
+      213: 5464176826516225081
+    second: Morph2_93
+  - first:
+      213: 8293387634771774645
+    second: Morph2_94
+  - first:
+      213: 8830816754863878265
+    second: Morph2_95
+  - first:
+      213: -7440759526393685376
+    second: Morph2_96
+  - first:
+      213: 5771374084280422203
+    second: Morph2_97
+  - first:
+      213: 6419355191490159138
+    second: Morph2_98
+  - first:
+      213: 5271001450336423703
+    second: Morph2_99
+  - first:
+      213: -7915315305900068927
+    second: Morph2_100
+  - first:
+      213: -4800317855855246107
+    second: Morph2_101
+  - first:
+      213: -1702535529340506500
+    second: Morph2_102
+  - first:
+      213: -7156513306710083711
+    second: Morph2_103
+  - first:
+      213: -680357324127716620
+    second: Morph2_104
+  - first:
+      213: 8988395379836540891
+    second: Morph2_105
+  - first:
+      213: 8555680831920782139
+    second: Morph2_106
+  - first:
+      213: 7367195540976850900
+    second: Morph2_107
+  - first:
+      213: -4015869215466900362
+    second: Morph2_108
+  - first:
+      213: 6859883323292476341
+    second: Morph2_109
+  - first:
+      213: 8105997152546174893
+    second: Morph2_110
+  - first:
+      213: 5833257760922670423
+    second: Morph2_111
+  - first:
+      213: -8183987904495510356
+    second: Morph2_112
+  - first:
+      213: 633314755492607693
+    second: Morph2_113
+  - first:
+      213: -7389062257842502659
+    second: Morph2_114
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Morph2_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 812
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed1e5a6a28837cd0800000000000000
+      internalID: -2561554047289123354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_1
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 812
+        width: 19
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b923df31be6c49bb0800000000000000
+      internalID: -4930096979108875621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_2
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 812
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4181861dc724b60800000000000000
+      internalID: 7728877149357610210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_3
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 812
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfc9e42a8bdea5d60800000000000000
+      internalID: 7879871875290930427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_4
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 812
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00878a05e82036380800000000000000
+      internalID: -8979330421784807424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_5
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 812
+        width: 19
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa0e45d47bccd6190800000000000000
+      internalID: -7967487078100049745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_6
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 684
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f76be58f490721920800000000000000
+      internalID: 2959551690260264575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_7
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 684
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce9be7683cbdef750800000000000000
+      internalID: 6340746958205794796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_8
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 684
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4631cb3e9a287e4e0800000000000000
+      internalID: -1952448247259983004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_9
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 684
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e0410c5f9de0960800000000000000
+      internalID: 7570227673169137194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_10
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 684
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb8f9c3acb105a730800000000000000
+      internalID: 4009612952956696766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_11
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 684
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4898f62411aa5560800000000000000
+      internalID: 7303326853659924554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_12
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 556
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 576825696848a7d80800000000000000
+      internalID: -8252137653620537739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_13
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 556
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28187337d5de51520800000000000000
+      internalID: 2672302939535016322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_14
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 428
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1922f607ec00b6d0800000000000000
+      internalID: -2976865167298385635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_15
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 428
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96011ebdd9ccf6160800000000000000
+      internalID: 7021055322464784489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_16
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 428
+        width: 45
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 168b6f80efcc0ebb0800000000000000
+      internalID: -4908698202389694367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_17
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 428
+        width: 41
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3633ed84b21f94360800000000000000
+      internalID: 7154514651263152995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_18
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 428
+        width: 27
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67e537e1fa8aef60800000000000000
+      internalID: 8064410854331115375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_19
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 324
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4a9286ac77303bc0800000000000000
+      internalID: -3805480676619019698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_20
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 303
+        width: 45
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e647b12731d3b4ef0800000000000000
+      internalID: -122937411094481810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_21
+      rect:
+        serializedVersion: 2
+        x: 440
+        y: 305
+        width: 47
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1062ea7e828435750800000000000000
+      internalID: 6292452444889556481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_22
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 328
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe296b1af1eb3e390800000000000000
+      internalID: -7790173887354465553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_23
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 307
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aae1d29bcf27a6020800000000000000
+      internalID: 2335805786509090474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_24
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 312
+        width: 25
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2d6f66182b2154d0800000000000000
+      internalID: -3147687213380178643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_25
+      rect:
+        serializedVersion: 2
+        x: 716
+        y: 326
+        width: 32
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc42a7ca0b1781360800000000000000
+      internalID: 7140582212817790157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_26
+      rect:
+        serializedVersion: 2
+        x: 731
+        y: 321
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83fd575df637524b0800000000000000
+      internalID: -5465835648584392904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_27
+      rect:
+        serializedVersion: 2
+        x: 742
+        y: 316
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7833213df625b2480800000000000000
+      internalID: -8922947596468472953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_28
+      rect:
+        serializedVersion: 2
+        x: 836
+        y: 308
+        width: 44
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e87141ba1def51b20800000000000000
+      internalID: 3104667694613665678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_29
+      rect:
+        serializedVersion: 2
+        x: 873
+        y: 323
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c806fef3d12338030800000000000000
+      internalID: 3495692836977729676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_30
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 300
+        width: 79
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a811e5d67e5fa7b00800000000000000
+      internalID: 827243855897039242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_31
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 300
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c298003353f36c0800000000000000
+      internalID: -4161549037498454899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_32
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 300
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766440834bc47ad40800000000000000
+      internalID: 5595525398948759143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_33
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 307
+        width: 33
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ea3c2dc7a77b1f0800000000000000
+      internalID: -1029219313300296113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_34
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 319
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e33d25a6fae26d3b0800000000000000
+      internalID: -5488147764966403266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_35
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 312
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8dfedb137a3063f0800000000000000
+      internalID: -909662858665591414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_36
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 300
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3e4a9b1e254a130800000000000000
+      internalID: 3577075133474726875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_37
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 312
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2af7cf4e61bb32da0800000000000000
+      internalID: -5970722973957718110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_38
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 300
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73b9b01e0b2910800800000000000000
+      internalID: 576903515667667767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_39
+      rect:
+        serializedVersion: 2
+        x: 460
+        y: 303
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e6362ca62139bfa0800000000000000
+      internalID: -5784538204213987615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_40
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 311
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 702c042ef8e5c5140800000000000000
+      internalID: 4709743282391925255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_41
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 300
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe286002fb48ac130800000000000000
+      internalID: 3587826009564938991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_42
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 303
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47a6e41765114aba0800000000000000
+      internalID: -6078714534077502860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_43
+      rect:
+        serializedVersion: 2
+        x: 673
+        y: 300
+        width: 23
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b42ea8935121bd0800000000000000
+      internalID: -2661041092935136470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_44
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 304
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e19c0910c35dd1f0800000000000000
+      internalID: -1018565856196783648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_45
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 314
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b70c75f1e045768c0800000000000000
+      internalID: -4006140923890646917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_46
+      rect:
+        serializedVersion: 2
+        x: 738
+        y: 308
+        width: 13
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4f22dab4ffc3590800000000000000
+      internalID: -7692993362963270445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_47
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 300
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e24e780f13c0b2060800000000000000
+      internalID: 6929645860268008494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_48
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 318
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ba88d678da44370800000000000000
+      internalID: 8305954409947900716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_49
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 314
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6229eb0b9a3a28770800000000000000
+      internalID: 8611625386695889446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_50
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 307
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 626b934b294f5e8c0800000000000000
+      internalID: -3970498585531140570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_51
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 308
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba4cf437dcd3a430800000000000000
+      internalID: 3793118128041118391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_52
+      rect:
+        serializedVersion: 2
+        x: 259
+        y: 142
+        width: 35
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9849fb8bf3146740800000000000000
+      internalID: 5144258645470038175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_53
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 194
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b75b616f2f4863b90800000000000000
+      internalID: -7262471170042710661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_54
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 139
+        width: 28
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69d95d94814b74e60800000000000000
+      internalID: 7946518083929480598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_55
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 196
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d5dee173904454d0800000000000000
+      internalID: -3146819237609286183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_56
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 161
+        width: 21
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e39032efab9b7c90800000000000000
+      internalID: -7170966801940966425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_57
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 139
+        width: 60
+        height: 95
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3d93b08b1319ccd0800000000000000
+      internalID: -2537475906202264261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_58
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 196
+        width: 11
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366ca9edc111bafb0800000000000000
+      internalID: -4635592575756351901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_59
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 161
+        width: 21
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594cfa2c049abbb90800000000000000
+      internalID: -7224995081576528747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_60
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 200
+        width: 6
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc0055e9db1bbc720800000000000000
+      internalID: 2867581015714758861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_61
+      rect:
+        serializedVersion: 2
+        x: 539
+        y: 214
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa3c499590d739a0800000000000000
+      internalID: -6253300216640029953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_62
+      rect:
+        serializedVersion: 2
+        x: 545
+        y: 166
+        width: 28
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f896b0e28cc13f380800000000000000
+      internalID: -8938769189308765809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_63
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 210
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea3875d54fdf3890800000000000000
+      internalID: -7476011365384570130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_64
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 200
+        width: 11
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fc6cda46d24be570800000000000000
+      internalID: 8496958610110967031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_65
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 200
+        width: 7
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82b06d9ffd28da060800000000000000
+      internalID: 6966368097092897576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_66
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 168
+        width: 24
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8a81c7ffbcbe930800000000000000
+      internalID: 4173653777847986364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_67
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 203
+        width: 11
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a01b947e336ac0f0800000000000000
+      internalID: -1095954439415852896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_68
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 191
+        width: 15
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7336c511284ba3d10800000000000000
+      internalID: 2106194246479143735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_69
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 188
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa9c6776e13f2b580800000000000000
+      internalID: -8812714208900232790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_70
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 188
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0dd24050326fcea80800000000000000
+      internalID: -8436097371703333424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_71
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 203
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 884b0ed9d55d12720800000000000000
+      internalID: 2819769439768065160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_72
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 183
+        width: 7
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7060c6deabba95540800000000000000
+      internalID: 4997214080879822343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_73
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 176
+        width: 13
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdc286f87c39a5150800000000000000
+      internalID: 5862160350289865947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_74
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 191
+        width: 7
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610a6ef5d34a45f60800000000000000
+      internalID: 8022217419762606102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_75
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 190
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ce5c4416458e1bb0800000000000000
+      internalID: -4963383203280953659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_76
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 141
+        width: 30
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63da89016a5820b40800000000000000
+      internalID: 5405029451087523126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_77
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 177
+        width: 19
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04bebc4d8855977d0800000000000000
+      internalID: -2920208837199008960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_78
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 172
+        width: 19
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2b55ff2681995600800000000000000
+      internalID: 457556842671069994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_79
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 172
+        width: 21
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7f117a9f5ea0700800000000000000
+      internalID: 507470768445192168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_80
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 174
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af9791d676f8ab490800000000000000
+      internalID: -7729708136053245446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_81
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 172
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c25d8c6b1329c4b0800000000000000
+      internalID: -5419762075871391031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_82
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 174
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 610e18741680e8130800000000000000
+      internalID: 3570800768455925782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_83
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 172
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4af31283c208232e0800000000000000
+      internalID: -2147513144893685852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_84
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 190
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f8996f0c7ad4300800000000000000
+      internalID: 238030802533322617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_85
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 176
+        width: 8
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad9503442a18c8d0800000000000000
+      internalID: -2825980023129399899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_86
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 171
+        width: 16
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aca1e1f7abf836c00800000000000000
+      internalID: 892715182308858570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_87
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 178
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f778bfac87f10eaa0800000000000000
+      internalID: -6133868088816597121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_88
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 148
+        width: 22
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63ce3c7c0f50cacb0800000000000000
+      internalID: -4851496166883070922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_89
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 144
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51734cd09f905e0f0800000000000000
+      internalID: -1088452769657637099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_90
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 152
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91ea8890bfcc72770800000000000000
+      internalID: 8586056593173949977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_91
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 144
+        width: 10
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a29d09ff81d39ae0800000000000000
+      internalID: -1543659830969003354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_92
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 152
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9e658b107a87a1c0800000000000000
+      internalID: -4492469889176080739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_93
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 161
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93cbb6e8fd7a4db40800000000000000
+      internalID: 5464176826516225081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_94
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 156
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bc40331d18081370800000000000000
+      internalID: 8293387634771774645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_95
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 144
+        width: 10
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970ba360d0d5d8a70800000000000000
+      internalID: 8830816754863878265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_96
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 161
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08a533232ac1db890800000000000000
+      internalID: -7440759526393685376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_97
+      rect:
+        serializedVersion: 2
+        x: 581
+        y: 153
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f0e6fc62a081050800000000000000
+      internalID: 5771374084280422203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_98
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 165
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222a4d31981261950800000000000000
+      internalID: 6419355191490159138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_99
+      rect:
+        serializedVersion: 2
+        x: 645
+        y: 164
+        width: 6
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71f0fd164eb562940800000000000000
+      internalID: 5271001450336423703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_100
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 157
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf2d9a9aa6272290800000000000000
+      internalID: -7915315305900068927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_101
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 145
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e488c0e758d16db0800000000000000
+      internalID: -4800317855855246107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_102
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 150
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e6d2cd4f06f58e0800000000000000
+      internalID: -1702535529340506500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_103
+      rect:
+        serializedVersion: 2
+        x: 575
+        y: 146
+        width: 7
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 187703b7015feac90800000000000000
+      internalID: -7156513306710083711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_104
+      rect:
+        serializedVersion: 2
+        x: 662
+        y: 147
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fa380f4e92ee86f0800000000000000
+      internalID: -680357324127716620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_105
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 140
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd75be3b9f13dbc70800000000000000
+      internalID: 8988395379836540891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_106
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 44
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bb14ef262ebb670800000000000000
+      internalID: 8555680831920782139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_107
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 44
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d754cabf498d3660800000000000000
+      internalID: 7367195540976850900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_108
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 44
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6743babb934c448c0800000000000000
+      internalID: -4015869215466900362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_109
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 44
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b3697d8983333f50800000000000000
+      internalID: 6859883323292476341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_110
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 44
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da7b7db76794e7070800000000000000
+      internalID: 8105997152546174893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_111
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 53
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75516131705e3f050800000000000000
+      internalID: 5833257760922670423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_112
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 44
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cac937a8c52ac6e80800000000000000
+      internalID: -8183987904495510356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_113
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 44
+        width: 21
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc676282a6cf9c800800000000000000
+      internalID: 633314755492607693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Morph2_114
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 44
+        width: 21
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df34d028607c47990800000000000000
+      internalID: -7389062257842502659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
