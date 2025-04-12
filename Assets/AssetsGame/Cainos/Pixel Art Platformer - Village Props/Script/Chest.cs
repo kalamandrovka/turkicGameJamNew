@@ -8,6 +8,7 @@ namespace Cainos.PixelArtPlatformer_VillageProps
     
     public class Chest : MonoBehaviour
     {
+        public GameObject Player;
         [FoldoutGroup("Reference")]
         public Animator animator;
 
@@ -38,7 +39,7 @@ namespace Cainos.PixelArtPlatformer_VillageProps
         void Update()
         {
             // Check if the F key is pressed and the chest isn't already open.
-            if (Input.GetKeyDown(KeyCode.F) && !IsOpened)
+            if (Input.GetKeyDown(KeyCode.F) && !IsOpened && Vector2.Distance(transform.position, Player.transform.position) < 1f)
             {
                 Open();
             }
