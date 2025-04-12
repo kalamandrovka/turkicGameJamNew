@@ -322,7 +322,15 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fire_WarriorIdle 1_0: 3981213934078523275
+      Fire_WarriorIdle 1_1: 5910726597508329210
+      Fire_WarriorIdle 1_2: -154673599223940697
+      Fire_WarriorIdle 1_3: -3930492968971688076
+      Fire_WarriorIdle 1_4: -475090331940649763
+      Fire_WarriorIdle 1_5: -8899979600783519162
+      Fire_WarriorIdle 1_6: 3650302799052811678
+      Fire_WarriorIdle 1_7: -6343598125970538091
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
