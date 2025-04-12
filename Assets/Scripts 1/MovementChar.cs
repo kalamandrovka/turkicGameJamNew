@@ -9,17 +9,18 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     // Attack settings
-    public float lightAttackDuration = 0.5f; // Duration for the light attack bool (using coroutine)
-    // heavyAttackDuration is no longer needed since heavy attack reset is not timer-based
-    public float heavyAttackCooldown = 1.0f; // Cooldown duration for heavy attack
+    public float lightAttackDuration = 0.5f;   // How long the light attack bool remains true
+    public float heavyAttackDuration = 1.0f;     // How long the heavy attack bool remains true
+    public float heavyAttackCooldown = 1.0f;     // Cooldown duration for heavy attack
 
     private Rigidbody2D rb;
     private bool isGrounded;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
-    // Cooldown timer for heavy attack
+    // Cooldown timer for heavy attack and a flag to prevent spamming
     private float heavyAttackCooldownTimer = 0f;
+    private bool heavyAttackActive = false;
 
     void Start()
     {
@@ -60,6 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
         // Update walking animation parameters
         animator.SetFloat("Walking", Mathf.Abs(moveInput));
+
     }
 
     void HandleJump()
@@ -86,14 +88,13 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(ResetAttack("LightAttack", lightAttackDuration));
         }
 
-        // Heavy attack: triggered by pressing K, provided the cooldown is finished
-        if (Input.GetKeyDown(KeyCode.K) && heavyAttackCooldownTimer <= 0f)
+        // Heavy attack: triggered by pressing K, provided cooldown is finished and heavy attack is not already active
+        if (Input.GetKeyDown(KeyCode.K) && heavyAttackCooldownTimer <= 0f && !heavyAttackActive)
         {
             Debug.Log("Heavy attack triggered.");
+            heavyAttackActive = true; // Block further heavy attack triggers until reset
             animator.SetBool("HeavyAttack", true);
-            // Note: No timer (coroutine) is used here to reset the heavy attack.
-            // Instead, add an Animation Event at the end of the heavy attack animation clip
-            // that calls the ResetHeavyAttack() function.
+            StartCoroutine(ResetHeavyAttack());
             heavyAttackCooldownTimer = heavyAttackCooldown; // Set the cooldown timer
         }
     }
@@ -106,11 +107,23 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(attackType + " reset after " + duration + " seconds.");
     }
 
-    // This method should be called by an animation event at the end of the heavy attack animation
-    public void ResetHeavyAttack()
+    // Coroutine for heavy attack: wait until the heavy attack animation finishes, then reset
+    IEnumerator ResetHeavyAttack()
     {
+        // Wait until the heavy attack animation state (named "HeavyAttack") finishes its playback.
+        while (true)
+        {
+            AnimatorStateInfo state = animator.GetCurrentAnimatorStateInfo(0);
+            if (state.IsName("HeavyAttack") && state.normalizedTime >= 1.0f)
+            {
+                break;
+            }
+            yield return null;
+        }
+
         animator.SetBool("HeavyAttack", false);
-        Debug.Log("Heavy attack reset via animation event.");
+        heavyAttackActive = false; // Allow new heavy attacks to be triggered
+        Debug.Log("HeavyAttack reset after animation finished.");
     }
 
     void UpdateAnimator()
