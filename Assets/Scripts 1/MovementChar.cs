@@ -9,25 +9,33 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     // Attack settings
-    public float hardAttackThreshold = 2f; // Hold duration (in seconds) required for a hard attack
-    public float lightAttackDuration = 0.5f; // How long the light attack bool remains true
-    public float hardAttackDuration = 1.0f;  // How long the hard attack bool remains true
+    public float lightAttackDuration = 0.5f; // Duration for the light attack bool (using coroutine)
+    // heavyAttackDuration is no longer needed since heavy attack reset is not timer-based
+    public float heavyAttackCooldown = 1.0f; // Cooldown duration for heavy attack
 
     private Rigidbody2D rb;
     private bool isGrounded;
     private Animator animator;
+    private SpriteRenderer spriteRenderer;
 
-    private float attackButtonHoldTime = 0f;
-    private bool isHoldingAttack = false;
+    // Cooldown timer for heavy attack
+    private float heavyAttackCooldownTimer = 0f;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        // Update heavy attack cooldown timer
+        if (heavyAttackCooldownTimer > 0f)
+        {
+            heavyAttackCooldownTimer -= Time.deltaTime;
+        }
+
         CheckGround();
         HandleMovement();
         HandleJump();
@@ -40,9 +48,18 @@ public class PlayerMovement : MonoBehaviour
         float moveInput = Input.GetAxisRaw("Horizontal");
         rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
-        // Update walking animation values
-        animator.SetFloat("walking", Mathf.Abs(moveInput));
-        animator.SetBool("walking", moveInput != 0 && isGrounded);
+        // Mirror the sprite when moving left
+        if (moveInput < 0)
+        {
+            spriteRenderer.flipX = true;
+        }
+        else if (moveInput > 0)
+        {
+            spriteRenderer.flipX = false;
+        }
+
+        // Update walking animation parameters
+        animator.SetFloat("Walking", Mathf.Abs(moveInput));
     }
 
     void HandleJump()
@@ -61,47 +78,39 @@ public class PlayerMovement : MonoBehaviour
 
     void HandleAttack()
     {
-        // Start timing when the attack key is first pressed
+        // Light attack: triggered by pressing J
         if (Input.GetKeyDown(KeyCode.J))
         {
-            isHoldingAttack = true;
-            attackButtonHoldTime = 0f;
-            Debug.Log("Attack key pressed.");
+            Debug.Log("Light attack triggered.");
+            animator.SetBool("LightAttack", true);
+            StartCoroutine(ResetAttack("LightAttack", lightAttackDuration));
         }
 
-        if (Input.GetKey(KeyCode.J))
+        // Heavy attack: triggered by pressing K, provided the cooldown is finished
+        if (Input.GetKeyDown(KeyCode.K) && heavyAttackCooldownTimer <= 0f)
         {
-            attackButtonHoldTime += Time.deltaTime;
-        }
-
-        // On releasing the attack key, check the hold time to determine attack type
-        if (Input.GetKeyUp(KeyCode.J))
-        {
-            isHoldingAttack = false;
-            if (attackButtonHoldTime >= hardAttackThreshold)
-            {
-                // Hard attack
-                Debug.Log("Hard attack triggered. Held for: " + attackButtonHoldTime + " seconds.");
-                animator.SetBool("HardAttack", true);
-                StartCoroutine(ResetAttack("HardAttack", hardAttackDuration));
-            }
-            else
-            {
-                // Light attack
-                Debug.Log("Light attack triggered. Held for: " + attackButtonHoldTime + " seconds.");
-                animator.SetBool("LightAttack", true);
-                StartCoroutine(ResetAttack("LightAttack", lightAttackDuration));
-            }
-            attackButtonHoldTime = 0f;
+            Debug.Log("Heavy attack triggered.");
+            animator.SetBool("HeavyAttack", true);
+            // Note: No timer (coroutine) is used here to reset the heavy attack.
+            // Instead, add an Animation Event at the end of the heavy attack animation clip
+            // that calls the ResetHeavyAttack() function.
+            heavyAttackCooldownTimer = heavyAttackCooldown; // Set the cooldown timer
         }
     }
 
-    // Coroutine to reset the attack bool after a set duration
+    // Coroutine to reset the light attack bool after a set duration
     IEnumerator ResetAttack(string attackType, float duration)
     {
         yield return new WaitForSeconds(duration);
         animator.SetBool(attackType, false);
         Debug.Log(attackType + " reset after " + duration + " seconds.");
+    }
+
+    // This method should be called by an animation event at the end of the heavy attack animation
+    public void ResetHeavyAttack()
+    {
+        animator.SetBool("HeavyAttack", false);
+        Debug.Log("Heavy attack reset via animation event.");
     }
 
     void UpdateAnimator()
