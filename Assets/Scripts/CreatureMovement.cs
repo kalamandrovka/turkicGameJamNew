@@ -1,195 +1,181 @@
 using UnityEngine;
 using System.Collections;
 
-/// <summary>
-/// A simple Enemy Creature script demonstrating how to trigger
-/// multiple animations: Idle, Walk, Attack, Hurt, Death, Spell,
-/// Attack-NoEffect, Hurt-NoEffect, Death-NoEffect, Spell-NoEffect.
-/// This example includes basic chasing logic and a simple health system.
-/// Adapt to your own game flow and Animator transitions.
-/// </summary>
-public class CreatureAI : MonoBehaviour
+public class EnemyCreatureController : MonoBehaviour
 {
-    [Header("Health")]
-    public int maxHealth = 3;         // Maximum health
-    private int currentHealth;
-    private bool isDead = false;
+    // ------------------------------
+    // Health Settings (Hit Count)
+    // ------------------------------
+    //private int hitCount = 0;          // Number of hits taken.
+    //public int hitLimit = 2;           // Enemy dies after 2 hits.
+    //private bool isDead = false;
 
-    [Header("Movement")]
-    public float moveSpeed = 2f;      // Movement speed while walking/chasing
-    public float senseRange = 5f;     // Range to sense the player
-    public float attackRange = 1.5f;  // Range to trigger an attack
-    private bool isFacingRight = true;
+    // ------------------------------
+    // Movement & AI Settings
+    // ------------------------------
+    public float moveSpeed = 2f;       // Movement speed while chasing.
+    public float senseRange = 6f;      // Distance within which the enemy senses the player.
+    public float attackRange = 1.5f;   // Range within which the enemy attacks.
+    public float attackCooldown = 1f;  // Cooldown (in seconds) between attacks.
+    private bool isAttacking = false;
+    private bool isFacingRight = true; // Tracks the enemy's facing direction.
 
-    [Header("Spell Settings")]
-    public float spellCooldown = 5f;  // Time between spells
-    private float spellTimer = 0f;
-
-    [Header("References")]
-    public Transform player;          // Assign your player's transform here
-    private Animator animator;
+    // ------------------------------
+    // References
+    // ------------------------------
+    public Transform player;         // Assign the player's transform in the Inspector.
     private Rigidbody2D rb;
+    private Animator animator;
 
     void Start()
     {
-        currentHealth = maxHealth;
-        animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
     {
-        // If the creature is dead, do nothing.
-        if (isDead) return;
+        /*if (isDead)
+            return;*/
 
-        // Basic countdown for deciding when to cast a spell.
-        if (spellTimer > 0f)
-            spellTimer -= Time.deltaTime;
-
-        // Basic "AI": check distance to player.
+        // Calculate the horizontal distance between enemy and player.
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+
+        // If the player is within sense range, start moving or attacking.
         if (distanceToPlayer <= senseRange)
         {
-            // Move toward the player.
-            MoveTowardPlayer();
-
-            // If close enough to attack, do so.
-            if (distanceToPlayer <= attackRange)
+            // If outside attack range, chase the player.
+            if (distanceToPlayer > attackRange)
             {
-                Attack();
+                ChasePlayer();
             }
-            // Otherwise, occasionally cast spells if the timer allows.
-            else if (spellTimer <= 0f)
+            else // Within attack range: attack.
             {
-                Spell();
-                spellTimer = spellCooldown;
+                if (!isAttacking)
+                    StartCoroutine(Attack());
             }
         }
         else
         {
-            // If the player is out of range, stay idle.
-            animator.Play("Idle");
-            rb.linearVelocity = Vector2.zero;
+            // Player is out of range: enemy idles.
+            Idle();
         }
     }
 
     /// <summary>
-    /// Moves the creature toward the player, switching to the "Walk" animation.
+    /// Chases the player by setting velocity based on a fixed moveSpeed
+    /// and turns on the "Walking" boolean.
     /// </summary>
-    private void MoveTowardPlayer()
+    void ChasePlayer()
     {
-        // Switch to "Walk" animation if not already in an attack or special state.
-        animator.Play("Walk");
-
-        // Determine direction to the player.
+        animator.SetBool("Walking", true);
+        // Determine normalized horizontal direction toward the player.
         Vector2 direction = (player.position - transform.position).normalized;
-
-        // Move in that direction.
         rb.linearVelocity = new Vector2(direction.x * moveSpeed, rb.linearVelocity.y);
 
-        // Flip sprite based on direction.x.
-        if (direction.x > 0 && !isFacingRight) Flip();
-        else if (direction.x < 0 && isFacingRight) Flip();
+        // Flip sprite if needed.
+        if (direction.x < 0 && !isFacingRight)
+            Flip();
+        else if (direction.x > 0 && isFacingRight)
+            Flip();
+
+        // Ensure the enemy is not attacking.
+        animator.SetBool("Attack", false);
     }
 
     /// <summary>
-    /// Performs a normal Attack (for a successful strike) by triggering
-    /// the "Attack" animation from Any State.
+    /// Sets the enemy to idle: stops movement and turns off "Walking" and "Attack".
     /// </summary>
-    private void Attack()
+    void Idle()
     {
-        // Stop movement
-        rb.linearVelocity = Vector2.zero;
-
-        // Trigger the Attack animation
-        animator.SetTrigger("Attack");
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+        animator.SetBool("Walking", false);
+        animator.SetBool("Attack", false);
     }
 
     /// <summary>
-    /// Performs an Attack with No Effect (if, for example, the creature missed
-    /// or the player is invulnerable).
+    /// Performs an attack by stopping movement, turning on "Attack",
+    /// waiting for a brief moment (to simulate attack timing), dealing damage,
+    /// and then waiting for the cooldown.
     /// </summary>
-    public void AttackNoEffect()
+    IEnumerator Attack()
     {
-        animator.SetTrigger("Attack-NoEffect");
-    }
+        isAttacking = true;
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); // Stop moving.
+        animator.SetBool("Attack", true);            // Trigger attack animation.
 
-    /// <summary>
-    /// Triggers the "Spell" animation from Any State.
-    /// </summary>
-    private void Spell()
-    {
-        // You might also stop movement or only cast spells if certain conditions are met.
-        animator.SetTrigger("Spell");
-    }
+        // Wait to simulate attack timing (adjust as needed).
+        yield return new WaitForSeconds(0.3f);
 
-    /// <summary>
-    /// Triggers a "Spell-NoEffect" animation for cases where a spell fizzles.
-    /// </summary>
-    public void SpellNoEffect()
-    {
-        animator.SetTrigger("Spell-NoEffect");
-    }
-
-    /// <summary>
-    /// Called when the creature takes damage. If the health drops below 1,
-    /// it calls Die(). Otherwise it triggers a "Hurt" animation.
-    /// </summary>
-    public void TakeDamage(int damage)
-    {
-        if (isDead) return;
-
-        currentHealth -= damage;
-        if (currentHealth > 0)
+        // Check again whether the player is still in attack range.
+        if (Vector2.Distance(transform.position, player.position) <= attackRange)
         {
-            animator.SetTrigger("Hurt");
+            // Assumes the player has a method TakeHit() in its controller.
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            if (playerController != null)
+            {
+                playerController.TakeHit();
+            }
         }
-        else
+
+        // Wait for the attack cooldown period.
+        yield return new WaitForSeconds(attackCooldown);
+        animator.SetBool("Attack", false);
+        isAttacking = false;
+    }
+
+    /// <summary>
+    /// Called externally (for example, by a player's hit) to apply damage.
+    /// Triggers the Hurt boolean, and if hit count reaches the limit, dies.
+    /// </summary>
+    /*public void TakeDamage(int damage) // -----------------------------------------------------------
+    {
+        if (isDead)
+            return;
+
+        hitCount += damage;
+        Debug.Log("Enemy hit! Total hits: " + hitCount);
+
+        // Trigger Hurt animation.
+        animator.SetBool("Hurt", true);
+        StartCoroutine(ResetHurt());
+
+        if (hitCount >= hitLimit)
         {
             Die();
         }
-    }
+    }*/
 
     /// <summary>
-    /// If the creature takes damage with no effect (e.g., the player has a weak weapon),
-    /// you might trigger "Hurt-NoEffect".
+    /// Resets the Hurt boolean after a short delay.
     /// </summary>
-    public void TakeDamageNoEffect()
+   /* IEnumerator ResetHurt()
     {
-        if (!isDead)
-            animator.SetTrigger("Hurt-NoEffect");
-    }
+        yield return new WaitForSeconds(0.5f);
+        animator.SetBool("Hurt", false);
+    }*/
 
     /// <summary>
-    /// Kills the creature, triggering the "Death" animation.
+    /// Handles enemy death by stopping movement and setting the "Die" boolean.
     /// </summary>
-    private void Die()
-    {
-        isDead = true;
-        rb.linearVelocity = Vector2.zero;
-        animator.SetTrigger("Death");
-        // Optionally: disable collisions, AI logic, etc.
-    }
-
-    /// <summary>
-    /// If the creature dies but it has no effect (for example, a special scenario),
-    /// you can call this method to trigger "Death-NoEffect".
-    /// </summary>
-    public void DieNoEffect()
+    /*void Die()
     {
         isDead = true;
         rb.linearVelocity = Vector2.zero;
-        animator.SetTrigger("Death-NoEffect");
-    }
+        animator.SetBool("Die", true);
+        Debug.Log("Enemy died!");
+        // Optionally destroy the enemy after a delay:
+        Destroy(gameObject, 1.5f);
+    }*/
 
     /// <summary>
-    /// Flips the sprite horizontally.
+    /// Flips the enemy's sprite horizontally.
     /// </summary>
-    private void Flip()
+    void Flip()
     {
         isFacingRight = !isFacingRight;
-        Vector3 localScale = transform.localScale;
-        localScale.x *= -1;
-        transform.localScale = localScale;
+        Vector3 scale = transform.localScale;
+        scale.x *= -1;
+        transform.localScale = scale;
     }
 }
