@@ -197,7 +197,10 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fire_WarriorFall_0: -7513583266745057499
+      Fire_WarriorFall_1: 3040374116367729292
+      Fire_WarriorFall_2: -3822857925525891202
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

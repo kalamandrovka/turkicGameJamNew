@@ -247,7 +247,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Fire_WarriorWallClimb_0: -3518993921834028071
+      Fire_WarriorWallClimb_1: 82493944917457552
+      Fire_WarriorWallClimb_2: 7664342953206195525
+      Fire_WarriorWallClimb_3: 334132919001342275
+      Fire_WarriorWallClimb_4: 5907202172486668830
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
