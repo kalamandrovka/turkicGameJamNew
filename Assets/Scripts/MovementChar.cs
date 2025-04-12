@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     // Health (Hit Count) Settings
     // ------------------------------
     private int hitCount = 0;      // Number of hits taken
-    private int hitLimit = 5;      // Player dies at 5 hits
+    private int hitLimit = 100;      // Player dies at 5 hits
 
     // ------------------------------
     // Camera Shake Reference

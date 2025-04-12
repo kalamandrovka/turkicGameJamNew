@@ -7,6 +7,11 @@ public class EnemyHealth : MonoBehaviour
     private int hitLimit = 2;      // Enemy dies after 2 hits.
     Animator animator;
 
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     public void TakeDamage(int damage)
     {
         animator.SetBool("Hurt", true);
@@ -15,13 +20,21 @@ public class EnemyHealth : MonoBehaviour
         Debug.Log("Enemy hit! Total hits: " + hitCount);
         if (hitCount >= hitLimit)
         {
-            Die();
+            animator.SetBool("Die", true);
+            StartCoroutine(DieAnimator());
+            
         }
     }
     IEnumerator NoHurt()
     {
         yield return new WaitForSeconds(0.5f);
         animator.SetBool("Hurt", false);
+    }
+    IEnumerator DieAnimator()
+    {
+        yield return new WaitForSeconds(1.3f);
+        Die();
+        
     }
     void Die()
     {
