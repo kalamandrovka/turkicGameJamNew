@@ -245,7 +245,7 @@ GameObject:
   - component: {fileID: 341648036}
   - component: {fileID: 341648035}
   - component: {fileID: 341648034}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Square (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1623,7 +1623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7143354523340597730, guid: 6cd02a8c374876646a97d2ab3bad5d38, type: 3}
       propertyPath: groundLayer.m_Bits
-      value: 0
+      value: 64
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1895,6 +1895,10 @@ PrefabInstance:
     - target: {fileID: 3160585600276947870, guid: 96db9caa0e8ad7543879f678149dd6e8, type: 3}
       propertyPath: m_Name
       value: Bringer-of-Death-SpritSheet_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3160585600276947870, guid: 96db9caa0e8ad7543879f678149dd6e8, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3429741983789838530, guid: 96db9caa0e8ad7543879f678149dd6e8, type: 3}
       propertyPath: player
