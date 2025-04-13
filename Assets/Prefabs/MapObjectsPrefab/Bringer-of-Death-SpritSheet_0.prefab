@@ -199,6 +199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b9af1c65a31cc4f922caf0ea5272a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodEffectPrefab: {fileID: 0}
+  bloodEffectPrefab2: {fileID: 0}
+  effectDuration: 2
 --- !u!114 &861513192663388173
 MonoBehaviour:
   m_ObjectHideFlags: 0
