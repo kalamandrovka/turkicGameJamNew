@@ -26,7 +26,7 @@ public class BulletShooter : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.linearVelocity = shootDirection * bulletSpeed;
+            rb.velocity = shootDirection * bulletSpeed;
         }
         else
         {
