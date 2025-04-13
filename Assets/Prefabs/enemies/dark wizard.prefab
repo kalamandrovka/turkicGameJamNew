@@ -145,7 +145,7 @@ MonoBehaviour:
   senseRange: 9
   attackRange: 3
   attackCooldown: 2
-  player: {fileID: 0}
+  player: {fileID: 3962905023413997776, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
 --- !u!50 &7837968275042623949
 Rigidbody2D:
   serializedVersion: 5
@@ -289,4 +289,4 @@ MonoBehaviour:
   senseRange: 9
   attackRange: 3
   attackCooldown: 2
-  player: {fileID: 0}
+  player: {fileID: 3962905023413997776, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
