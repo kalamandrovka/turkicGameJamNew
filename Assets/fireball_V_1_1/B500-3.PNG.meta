@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: d0545e03570fde546b0e0c347a81567b
+guid: 5b356349eea47ad41b7634e9a875a4a3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -837286467281391351
-    second: Python Data Associate - Badge without outline_0
+      213: 6219271134402109977
+    second: B500-3_0
+  - first:
+      213: 4239617298256332105
+    second: B500-3_1
+  - first:
+      213: 519415609736153381
+    second: B500-3_2
+  - first:
+      213: 1781242852969375934
+    second: B500-3_3
+  - first:
+      213: 6942158295784607011
+    second: B500-3_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +108,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Python Data Associate - Badge without outline_0
+      name: B500-3_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 188
-        height: 232
+        x: 196
+        y: 362
+        width: 85
+        height: 63
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9017376e46c5164f0800000000000000
-      internalID: -837286467281391351
+      spriteID: 912e0e7452a4f4650800000000000000
+      internalID: 6219271134402109977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B500-3_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 423
+        width: 27
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9458b26687526da30800000000000000
+      internalID: 4239617298256332105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B500-3_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 232
+        width: 109
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 529cd1dbeb5553700800000000000000
+      internalID: 519415609736153381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B500-3_3
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 78
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb861f5ffee38b810800000000000000
+      internalID: 1781242852969375934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: B500-3_4
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 29
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32dc5ca5030875060800000000000000
+      internalID: 6942158295784607011
       vertices: []
       indices: 
       edges: []
@@ -147,8 +234,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Python Data Associate - Badge without outline_0: -837286467281391351
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

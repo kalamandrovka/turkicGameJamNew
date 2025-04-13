@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d0545e03570fde546b0e0c347a81567b
+guid: c003f1713cff5234a83eed5ea0334f21
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -837286467281391351
-    second: Python Data Associate - Badge without outline_0
+      213: -2734149354196926569
+    second: FB500-2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Python Data Associate - Badge without outline_0
+      name: FB500-2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 188
-        height: 232
+        x: 95
+        y: 111
+        width: 306
+        height: 306
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9017376e46c5164f0800000000000000
-      internalID: -837286467281391351
+      spriteID: 79f7a3406a95e0ad0800000000000000
+      internalID: -2734149354196926569
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Python Data Associate - Badge without outline_0: -837286467281391351
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
