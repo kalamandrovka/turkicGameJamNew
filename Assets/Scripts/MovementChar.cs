@@ -62,6 +62,11 @@ public class PlayerController : MonoBehaviour
     private int dashCharges;
     private float dashCooldownTimer = 0f;
 
+    //audio playing
+    public AudioClip lightAttackClip;
+    public AudioClip heavyAttackClip;
+    private AudioSource audioSource;
+
     void Start()
     {
         shake = Camera.main.GetComponent<CameraShake>();
@@ -71,6 +76,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
 
         dashCharges = maxDashCharges;
+        audioSource = gameObject.AddComponent<AudioSource>();
     }
 
     void Update()
@@ -138,6 +144,9 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Light attack triggered.");
             animator.SetBool("LightAttack", true);
             DamageEnemy(lightAttackRange, lightAttackDamage);
+
+            audioSource.PlayOneShot(lightAttackClip);
+
             StartCoroutine(ResetAttack("LightAttack", lightAttackDuration));
         }
 
@@ -148,6 +157,9 @@ public class PlayerController : MonoBehaviour
             heavyAttackActive = true;
             animator.SetBool("HeavyAttack", true);
             DamageEnemy(heavyAttackRange, heavyAttackDamage);
+
+            audioSource.PlayOneShot(heavyAttackClip);
+
             StartCoroutine(ResetHeavyAttack());
             heavyAttackCooldownTimer = heavyAttackCooldown;
             StartCoroutine(StartShake());

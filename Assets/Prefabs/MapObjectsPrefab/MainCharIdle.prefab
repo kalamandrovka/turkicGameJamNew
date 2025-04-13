@@ -82,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 11
   m_Sprite: {fileID: 3981213934078523275, guid: 67465b0c6f554d74a87869ea70b3291e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -244,6 +244,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feather: 0
+  collectibles: 0
+  powerBar: {fileID: 0}
+  fillImage: {fileID: 0}
+  normalFillSprite: {fileID: -1518315197876410104, guid: 841a1be623718c84d84f0054c49d1c30, type: 3}
+  fullFillSprite: {fileID: -5185649437945853404, guid: 1baf9278fb7c8af4b9a3539989ad3a18, type: 3}
 --- !u!1 &8974468805020285918
 GameObject:
   m_ObjectHideFlags: 0

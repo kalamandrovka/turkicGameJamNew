@@ -757,6 +757,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: MainCharIdle
       objectReference: {fileID: 0}
+    - target: {fileID: 7143354523340597730, guid: 6cd02a8c374876646a97d2ab3bad5d38, type: 3}
+      propertyPath: heavyAttackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: e3b4543a801b5bf44a0bd2bdcae2831a, type: 3}
+    - target: {fileID: 7143354523340597730, guid: 6cd02a8c374876646a97d2ab3bad5d38, type: 3}
+      propertyPath: lightAttackClip
+      value: 
+      objectReference: {fileID: 8300000, guid: a698adbe47690cc4cbd824f4748aa100, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
