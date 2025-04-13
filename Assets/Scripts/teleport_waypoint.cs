@@ -1,22 +1,66 @@
 ﻿using UnityEngine;
 
-public class teleport_waypoint : MonoBehaviour
+public class TeleportWaypoint : MonoBehaviour
 {
-    [Header("Waypoint Assignments")]
-    public Transform waypoint1; // Assign Waypoint 1
-    public Transform waypoint2; // Assign Waypoint 2
-    public Transform waypoint3; // Assign Waypoint 3
-    public Transform waypoint4; // Assign Waypoint 4
-    public Transform waypoint5; // Assign Waypoint 5
-    public Transform waypoint6; // Assign Waypoint 6
-    public Transform waypoint7; // Assign Waypoint 7
-    public Transform waypoint8; // Assign Waypoint 8
+    [Header("Waypoint Tags")]
+    public string waypoint1Tag = "Waypoint1";
+    public string waypoint2Tag = "Waypoint2";
+    public string waypoint3Tag = "Waypoint3";
+    public string waypoint4Tag = "Waypoint4";
+    public string waypoint5Tag = "Waypoint5";
+    public string waypoint6Tag = "Waypoint6";
+    public string waypoint7Tag = "Waypoint7";
+    public string waypoint8Tag = "Waypoint8";
+
+    [Header("GameObjects to Switch")]
+    public GameObject object1;  // First game object
+    public GameObject object2;  // Second game object
 
     [Header("Settings")]
-    public float detectionRadius = 0.5f;
+    public float detectionRadium= 1f;
     public float teleportCooldown = 0.1f;
 
+    private Transform waypoint1;
+    private Transform waypoint2;
+    private Transform waypoint3;
+    private Transform waypoint4;
+    private Transform waypoint5;
+    private Transform waypoint6;
+    private Transform waypoint7;
+    private Transform waypoint8;
     private bool canTeleport = true;
+    private bool showObject1 = true;
+
+    void Start()
+    {
+        waypoint1 = FindAndLogWaypoint(waypoint1Tag);
+        waypoint2 = FindAndLogWaypoint(waypoint2Tag);
+        waypoint3 = FindAndLogWaypoint(waypoint3Tag);
+        waypoint4 = FindAndLogWaypoint(waypoint4Tag);
+        waypoint5 = FindAndLogWaypoint(waypoint5Tag);
+        waypoint6 = FindAndLogWaypoint(waypoint6Tag);
+        waypoint7 = FindAndLogWaypoint(waypoint7Tag);
+        waypoint8 = FindAndLogWaypoint(waypoint8Tag);
+
+        // Initialize objects
+        if (object1 != null) object1.SetActive(true);
+        if (object2 != null) object2.SetActive(false);
+    }
+
+    private Transform FindAndLogWaypoint(string tag)
+    {
+        GameObject obj = GameObject.FindGameObjectWithTag(tag);
+        if (obj != null)
+        {
+            Debug.Log($"✅ Found waypoint with tag '{tag}': {obj.name}");
+            return obj.transform;
+        }
+        else
+        {
+            Debug.LogWarning($"❌ Could not find waypoint with tag '{tag}'");
+            return null;
+        }
+    }
 
     void Update()
     {
@@ -30,22 +74,44 @@ public class teleport_waypoint : MonoBehaviour
 
     void CheckTeleport(Transform source, Transform destination)
     {
-        if (source != null && destination != null &&
-            Vector3.Distance(transform.position, source.position) < detectionRadius)
+        if (source == null || destination == null)
         {
+            Debug.LogWarning("One or both waypoints are null");
+            return;
+        }
+
+        float dist = Vector2.Distance(transform.position, source.position);
+        Debug.Log($"[DEBUG] Dist to {source.name}: {dist}, Radius: {detectionRadium}");
+
+        if (dist < detectionRadium)
+        {
+            Debug.Log($"✅ Teleporting to {destination.name}!");
             TeleportPlayer(destination);
+        }
+        else
+        {
+            Debug.Log($"❌ Too far to teleport to {source.name}");
         }
     }
 
     void TeleportPlayer(Transform destination)
     {
         canTeleport = false;
+
+        // Teleport player
         transform.position = destination.position;
+
+        // Switch active game object
+        showObject1 = !showObject1;
+        if (object1 != null) object1.SetActive(showObject1);
+        if (object2 != null) object2.SetActive(!showObject1);
+
         Invoke(nameof(ResetTeleport), teleportCooldown);
     }
 
     void ResetTeleport()
     {
+        Debug.Log("✅ Teleport cooldown reset");
         canTeleport = true;
     }
 

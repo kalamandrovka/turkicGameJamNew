@@ -67222,11 +67222,11 @@ Transform:
   m_GameObject: {fileID: 1032571378}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.4, y: 0.22, z: 10}
-  m_LocalScale: {x: 2.9274294, y: 2.3201036, z: 1}
+  m_LocalPosition: {x: 0.60555553, y: 0.61444455, z: 0}
+  m_LocalScale: {x: 0.32527, y: 0.2577893, z: 0.11111113}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1278290061}
+  m_Father: {fileID: 2032836923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1032571380
 SpriteRenderer:
@@ -71141,8 +71141,7 @@ Transform:
   m_LocalPosition: {x: 0.65, y: 0.59000003, z: -1.1111112}
   m_LocalScale: {x: 0.11111112, y: 0.11111112, z: 0.11111112}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1032571379}
+  m_Children: []
   m_Father: {fileID: 2032836923}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1278290062
@@ -84424,6 +84423,9 @@ MonoBehaviour:
   waypoint6: {fileID: 137599002}
   waypoint7: {fileID: 1751928059}
   waypoint8: {fileID: 1092721542}
+  groundMaterial1: {fileID: 0}
+  groundMaterial2: {fileID: 0}
+  groundRenderer: {fileID: 0}
   detectionRadius: 0.5
   teleportCooldown: 0.1
 --- !u!1 &2035772020
@@ -84622,11 +84624,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3962905023413997776, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 194.31
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3962905023413997776, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -119.36
+      value: 1.89
       objectReference: {fileID: 0}
     - target: {fileID: 3962905023413997776, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -84667,6 +84669,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3962905023413997776, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1032571379}
     - targetCorrespondingSourceObject: {fileID: 3962905023413997776, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1278290061}
