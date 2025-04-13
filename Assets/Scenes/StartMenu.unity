@@ -342,6 +342,7 @@ GameObject:
   - component: {fileID: 830997390}
   - component: {fileID: 830997389}
   - component: {fileID: 830997388}
+  - component: {fileID: 830997391}
   m_Layer: 5
   m_Name: Play
   m_TagString: Untagged
@@ -413,9 +414,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1397299520}
-        m_TargetAssemblyTypeName: mainmenu, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 830997391}
+        m_TargetAssemblyTypeName: PlayButtonLoader, Assembly-CSharp
+        m_MethodName: LoadGameScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -463,6 +464,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830997386}
   m_CullTransparentMesh: 1
+--- !u!114 &830997391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830997386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88388e48394ffac489d7f59aab43dd51, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &895895832
 GameObject:
   m_ObjectHideFlags: 0

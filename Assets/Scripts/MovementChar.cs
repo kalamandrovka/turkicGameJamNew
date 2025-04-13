@@ -36,7 +36,7 @@ public class PlayerController : MonoBehaviour
     public float heavyAttackCooldown = 1.0f;
 
     // The attack ranges are used to check if an enemy is close enough.
-    public float lightAttackRange = 0.55f;
+    public float lightAttackRange = 1f;
     public float heavyAttackRange = 1f;
 
     public int lightAttackDamage = 1;
@@ -163,8 +163,9 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Light attack triggered.");
             animator.SetBool("LightAttack", true);
-            if (DamageEnemy(lightAttackRange, lightAttackDamage)) 
+            if (DamageEnemy()) 
             {
+                Debug.Log("Hit enemy with light attack.");
                 audioSource.PlayOneShot(lightAttackClipHit);   
             }
             else
@@ -181,7 +182,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Heavy attack triggered.");
             heavyAttackActive = true;
             animator.SetBool("HeavyAttack", true);
-            if (DamageEnemy(heavyAttackRange, heavyAttackDamage))
+            if (DamageEnemy())
             {
                 
                 audioSource.PlayOneShot(heavyAttackClipHit);
@@ -199,8 +200,26 @@ public class PlayerController : MonoBehaviour
 
     // Searches for an enemy in range (using the given range parameter) and, if found,
     // applies one hit.
-    bool DamageEnemy(float range, int damage)
+    bool DamageEnemy()
     {
+        float range;
+        int damage;
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            range = heavyAttackRange;
+            damage = heavyAttackDamage;
+        }
+        else if(Input.GetKeyDown(KeyCode.J))
+        {
+            range = lightAttackRange;
+            damage = lightAttackDamage;
+        }
+        else
+        {
+            range = ultiAttackRange;
+            damage = ultiAttackDamage;
+        }
+        
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
         {
@@ -209,9 +228,10 @@ public class PlayerController : MonoBehaviour
                 EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
                 if (enemyHealth != null)
                 {
+                    Debug.Log("Searching for enemies within range: " + range);
                     enemyHealth.TakeDamage(damage);
                 }
-                 // Only hit one enemy per attack.
+                break; // Only hit one enemy per attack.
             }
             
         }
@@ -281,7 +301,7 @@ public class PlayerController : MonoBehaviour
             // Activate ultimate animation.
             animator.SetBool("Ulti", true);
             // Optionally, you might want the ulti to damage enemies in an area.
-            if (DamageEnemy(ultiAttackRange, ultiAttackDamage)) 
+            if (DamageEnemy()) 
             {
                 audioSource.PlayOneShot(ultiAttackClipHit);
             }
