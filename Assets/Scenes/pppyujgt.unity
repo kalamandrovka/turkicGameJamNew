@@ -816,7 +816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7143354523340597730, guid: 6cd02a8c374876646a97d2ab3bad5d38, type: 3}
       propertyPath: collectibleCount
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
