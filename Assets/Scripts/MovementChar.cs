@@ -137,7 +137,7 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Light attack triggered.");
             animator.SetBool("LightAttack", true);
-            DamageEnemy(lightAttackRange,lightAttackDamage);
+            DamageEnemy(lightAttackRange, lightAttackDamage);
             StartCoroutine(ResetAttack("LightAttack", lightAttackDuration));
         }
 
@@ -229,38 +229,17 @@ public class PlayerController : MonoBehaviour
     // Ground detection using collision events.
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        // Check if the collision object's layer is in your groundLayer
         if ((groundLayer.value & (1 << collision.gameObject.layer)) != 0)
         {
-            bool validGround = false;
-            // Loop through the contact points of the collision
-            foreach (ContactPoint2D contact in collision.contacts)
-            {
-                // If the normal points upwards beyond a threshold, consider it ground.
-                // Adjust the threshold (0.5f here) to suit your needs.
-                if (contact.normal.y > 0.5f)
-                {
-                    validGround = true;
-                    break;
-                }
-            }
-            if (validGround)
-            {
-                isGrounded = true;
-                jumpCount = maxJumpCount; // Reset jump count on valid ground contact.
-            }
+            isGrounded = true;
+            jumpCount = maxJumpCount;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        // Check if the leaving collision is with an object in the groundLayer.
         if ((groundLayer.value & (1 << collision.gameObject.layer)) != 0)
-        {
-            // When a collision ends, set isGrounded to false.
-            // (If you have multiple ground contacts, you might want to check all contacts before setting false.)
             isGrounded = false;
-        }
     }
 
     // Optional: Visualize the groundCheck area.
