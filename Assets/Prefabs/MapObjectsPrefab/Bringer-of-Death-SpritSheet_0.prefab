@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 964609694454725315}
   - component: {fileID: 2868930755392506000}
   - component: {fileID: 8862528025351561974}
-  - component: {fileID: 3429741983789838530}
   - component: {fileID: 3265090134456166624}
-  m_Layer: 8
+  - component: {fileID: 861513192663388173}
+  m_Layer: 7
   m_Name: Bringer-of-Death-SpritSheet_0
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -187,7 +187,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3429741983789838530
+--- !u!114 &3265090134456166624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3160585600276947870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51b9af1c65a31cc4f922caf0ea5272a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &861513192663388173
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -203,16 +215,4 @@ MonoBehaviour:
   senseRange: 6
   attackRange: 1.5
   attackCooldown: 1
-  player: {fileID: 4232533850097504032, guid: 6cd02a8c374876646a97d2ab3bad5d38, type: 3}
---- !u!114 &3265090134456166624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3160585600276947870}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51b9af1c65a31cc4f922caf0ea5272a0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  player: {fileID: 0}

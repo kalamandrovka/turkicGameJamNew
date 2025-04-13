@@ -244,6 +244,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   feather: 0
+  collectibles: 0
+  powerBar: {fileID: 0}
+  fillImage: {fileID: 0}
+  normalFillSprite: {fileID: -1518315197876410104, guid: 841a1be623718c84d84f0054c49d1c30, type: 3}
+  fullFillSprite: {fileID: -5185649437945853404, guid: 1baf9278fb7c8af4b9a3539989ad3a18, type: 3}
 --- !u!1 &8974468805020285918
 GameObject:
   m_ObjectHideFlags: 0
