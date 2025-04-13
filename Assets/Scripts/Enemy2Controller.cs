@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class EnemyCreatureController : MonoBehaviour
+public class Enemy2Controller : MonoBehaviour
 {
     // ------------------------------
     // Health Settings (Hit Count)
@@ -9,6 +9,11 @@ public class EnemyCreatureController : MonoBehaviour
     //private int hitCount = 0;          // Number of hits taken.
     //public int hitLimit = 2;           // Enemy dies after 2 hits.
     //private bool isDead = false;
+
+
+    public GameObject bulletPrefab; // Assign your bullet prefab in the Inspector
+    public Transform spawnPoint;    // Assign the spawn location (empty GameObject)
+    public float bulletSpeed = 10f;
 
     // ------------------------------
     // Movement & AI Settings
@@ -103,6 +108,7 @@ public class EnemyCreatureController : MonoBehaviour
         isAttacking = true;
         rb.linearVelocity = Vector2.zero;
         animator.SetBool("Attack", true);
+        Shoot();
 
         // Adjust this delay to match the animation's hit frame
         yield return new WaitForSeconds(0.1f);
@@ -117,6 +123,35 @@ public class EnemyCreatureController : MonoBehaviour
         yield return new WaitForSeconds(attackCooldown);
         animator.SetBool("Attack", false);
         isAttacking = false;
+
+
+    }
+
+
+    public void Shoot()
+    {
+        if (player == null || bulletPrefab == null) return;
+
+        // Create bullet at spawn point
+        GameObject bullet = Instantiate(bulletPrefab, spawnPoint.position, Quaternion.identity);
+
+        // Calculate direction to player
+        Vector2 shootDirection = (player.position - spawnPoint.position).normalized;
+
+        // Apply velocity to bullet
+        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = shootDirection * bulletSpeed;
+        }
+        else
+        {
+            Debug.LogError("Bullet prefab is missing Rigidbody2D component!");
+        }
+
+        // Optional: Rotate bullet to face direction (if needed)
+        float angle = Mathf.Atan2(shootDirection.y, shootDirection.x) * Mathf.Rad2Deg;
+        bullet.transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
     }
 
     /// <summary>
