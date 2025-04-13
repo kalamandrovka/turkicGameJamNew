@@ -77,7 +77,12 @@ public class PlayerController : MonoBehaviour
 
     // Audio playing
     public AudioClip lightAttackClip;
+    public AudioClip lightAttackClipHit;
+    public AudioClip heavyAttackClipHit;
     public AudioClip heavyAttackClip;
+    public AudioClip ultiAttackClip;
+    public AudioClip ultiAttackClipHit;
+
     private AudioSource audioSource;
 
     void Start()
@@ -157,8 +162,15 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("Light attack triggered.");
             animator.SetBool("LightAttack", true);
-            DamageEnemy(lightAttackRange, lightAttackDamage);
-            audioSource.PlayOneShot(lightAttackClip);
+            if (DamageEnemy(lightAttackRange, lightAttackDamage)) 
+            {
+                audioSource.PlayOneShot(lightAttackClipHit);   
+            }
+            else
+            {
+                audioSource.PlayOneShot(lightAttackClip);
+            }
+            
             StartCoroutine(ResetAttack("LightAttack", lightAttackDuration));
         }
 
@@ -168,8 +180,16 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Heavy attack triggered.");
             heavyAttackActive = true;
             animator.SetBool("HeavyAttack", true);
-            DamageEnemy(heavyAttackRange, heavyAttackDamage);
-            audioSource.PlayOneShot(heavyAttackClip);
+            if (DamageEnemy(heavyAttackRange, heavyAttackDamage))
+            {
+                
+                audioSource.PlayOneShot(heavyAttackClipHit);
+            }
+            else 
+            {
+                audioSource.PlayOneShot(heavyAttackClip);
+            }
+         
             StartCoroutine(ResetHeavyAttack());
             heavyAttackCooldownTimer = heavyAttackCooldown;
             StartCoroutine(StartShake(0.1f,0.2f));
@@ -178,7 +198,7 @@ public class PlayerController : MonoBehaviour
 
     // Searches for an enemy in range (using the given range parameter) and, if found,
     // applies one hit.
-    void DamageEnemy(float range, int damage)
+    bool DamageEnemy(float range, int damage)
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)
@@ -190,9 +210,11 @@ public class PlayerController : MonoBehaviour
                 {
                     enemyHealth.TakeDamage(damage);
                 }
-                break; // Only hit one enemy per attack.
+                 // Only hit one enemy per attack.
             }
+            
         }
+        return false;
     }
 
 
@@ -258,7 +280,14 @@ public class PlayerController : MonoBehaviour
             // Activate ultimate animation.
             animator.SetBool("Ulti", true);
             // Optionally, you might want the ulti to damage enemies in an area.
-            DamageEnemy(ultiAttackRange, ultiAttackDamage);
+            if (DamageEnemy(ultiAttackRange, ultiAttackDamage)) 
+            {
+                audioSource.PlayOneShot(ultiAttackClipHit);
+            }
+            else
+            {
+                audioSource.PlayOneShot(ultiAttackClip);
+            }
             StartCoroutine(ResetUlti(ultiAttackDuration));
             StartCoroutine(StartShake(0.2f,0.4f));
 
