@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.Rendering;
+using NUnit.Framework;
 
 public class PlayerController : MonoBehaviour
 {
@@ -7,7 +9,7 @@ public class PlayerController : MonoBehaviour
     // Health (Hit Count) Settings
     // ------------------------------
     private int hitCount = 0;      // Number of hits taken
-    private int hitLimit = 100;      // Player dies at 5 hits
+    private int hitLimit = 100;    // Player dies at 100 hits
 
     // ------------------------------
     // Camera Shake Reference
@@ -41,6 +43,17 @@ public class PlayerController : MonoBehaviour
     public int heavyAttackDamage = 2;
 
     // ------------------------------
+    // Ultimate (Ulti) Settings
+    // ------------------------------
+    public int ultiAttackDamage = 5;
+    public float ultiAttackDuration = 1.5f;
+    public float ultiAttackRange = 1.5f;
+    // Ulti is available when the player has collected at least this many collectibles.
+    public int ultiRequirement = 5;
+    // This variable should be updated by your collectibles system.
+    public int collectibleCount = 0;
+
+    // ------------------------------
     // Dash Settings
     // ------------------------------
     public float dashSpeed = 15f;
@@ -62,7 +75,7 @@ public class PlayerController : MonoBehaviour
     private int dashCharges;
     private float dashCooldownTimer = 0f;
 
-    //audio playing
+    // Audio playing
     public AudioClip lightAttackClip;
     public AudioClip heavyAttackClip;
     private AudioSource audioSource;
@@ -99,6 +112,7 @@ public class PlayerController : MonoBehaviour
 
         HandleJump();
         HandleAttack();
+        HandleUlti();  // Check for ultimate input.
         UpdateAnimator();
     }
 
@@ -135,7 +149,7 @@ public class PlayerController : MonoBehaviour
     }
 
     // Attack logic now checks for key presses and then finds an enemy (by tag "Enemy")
-    // that is within range. If one is found, it applies one hit.
+    // within range. If one is found, it applies one hit.
     void HandleAttack()
     {
         // Light attack with "J" key.
@@ -144,9 +158,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Light attack triggered.");
             animator.SetBool("LightAttack", true);
             DamageEnemy(lightAttackRange, lightAttackDamage);
-
             audioSource.PlayOneShot(lightAttackClip);
-
             StartCoroutine(ResetAttack("LightAttack", lightAttackDuration));
         }
 
@@ -157,12 +169,10 @@ public class PlayerController : MonoBehaviour
             heavyAttackActive = true;
             animator.SetBool("HeavyAttack", true);
             DamageEnemy(heavyAttackRange, heavyAttackDamage);
-
             audioSource.PlayOneShot(heavyAttackClip);
-
             StartCoroutine(ResetHeavyAttack());
             heavyAttackCooldownTimer = heavyAttackCooldown;
-            StartCoroutine(StartShake());
+            StartCoroutine(StartShake(0.1f,0.2f));
         }
     }
 
@@ -178,7 +188,7 @@ public class PlayerController : MonoBehaviour
                 EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
                 if (enemyHealth != null)
                 {
-                    enemyHealth.TakeDamage(damage); // Apply one hit (damage=1).
+                    enemyHealth.TakeDamage(damage);
                 }
                 break; // Only hit one enemy per attack.
             }
@@ -210,6 +220,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && dashCharges > 0)
         {
+            
             Debug.Log("Dash triggered.");
             dashCharges--; // Use one dash charge.
             if (dashCharges <= 0)
@@ -233,6 +244,31 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Dash finished.");
     }
 
+    void HandleUlti()
+    {
+        // Ultimate ability is triggered with the "L" key, if the player has enough collectibles.
+        if (Input.GetKeyDown(KeyCode.L) && collectibleCount >= ultiRequirement)
+        {
+            Debug.Log("Ulti triggered.");
+            // Consume collectibles.
+            collectibleCount -= ultiRequirement;
+            // Activate ultimate animation.
+            animator.SetBool("Ulti", true);
+            // Optionally, you might want the ulti to damage enemies in an area.
+            DamageEnemy(ultiAttackRange, ultiAttackDamage);
+            StartCoroutine(ResetUlti(ultiAttackDuration));
+            StartCoroutine(StartShake(0.2f,0.4f));
+
+        }
+    }
+
+    IEnumerator ResetUlti(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        animator.SetBool("Ulti", false);
+        Debug.Log("Ulti finished after " + duration + " seconds.");
+    }
+
     void UpdateAnimator()
     {
         animator.SetBool("IsGrounded", isGrounded);
@@ -246,7 +282,14 @@ public class PlayerController : MonoBehaviour
             isGrounded = true;
             jumpCount = maxJumpCount;
         }
+        if (collision.gameObject.CompareTag("Collectibles"))
+        {
+            collectibleCount++;
+        }
     }
+
+
+
 
     private void OnCollisionExit2D(Collision2D collision)
     {
@@ -264,10 +307,10 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    IEnumerator StartShake()
+    IEnumerator StartShake(float a, float b)
     {
         yield return new WaitForSeconds(0.15f);
-        shake.StartCameraShake(0.25f, 0.3f);
+        shake.StartCameraShake(a, b);
     }
 
     // ------------------------------
