@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour
     public GameObject bloodEffectPrefab2; // Second blood effect prefab.
 
     // The duration in seconds after which the blood effect will be destroyed.
-    public float effectDuration = 2.0f;
+    public float effectDuration = 0.5f;
 
     private void Start()
     {
