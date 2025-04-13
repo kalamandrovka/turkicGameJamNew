@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Rendering;
+using NUnit.Framework;
 
 public class PlayerController : MonoBehaviour
 {
@@ -219,6 +220,7 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && dashCharges > 0)
         {
+            
             Debug.Log("Dash triggered.");
             dashCharges--; // Use one dash charge.
             if (dashCharges <= 0)
