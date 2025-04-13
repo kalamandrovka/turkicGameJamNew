@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      VFX Blood Batch 1_7_0: 5519150491719565691
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
