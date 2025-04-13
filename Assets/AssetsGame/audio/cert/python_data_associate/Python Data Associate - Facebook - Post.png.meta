@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5f1c8ce44fd6d81498cc8d2ebe2b26ae
+guid: 7bef2d7a3a2c6d84b8425aad1f3e1317
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3994751486787718166
-    second: ChatGPT Image Apr 13, 2025, 07_24_01 AM_0
+      213: 1893529386982515543
+    second: Python Data Associate - Facebook - Post_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,30 +96,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image Apr 13, 2025, 07_24_01 AM_0
+      name: Python Data Associate - Facebook - Post_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1024
-        height: 1024
+        width: 2160
+        height: 2160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ae3fd0810bacf88c0800000000000000
-      internalID: -3994751486787718166
+      spriteID: 7532bd2f1fa274a10800000000000000
+      internalID: 1893529386982515543
       vertices: []
       indices: 
       edges: []
@@ -147,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      ChatGPT Image Apr 13, 2025, 07_24_01 AM_0: -3994751486787718166
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
