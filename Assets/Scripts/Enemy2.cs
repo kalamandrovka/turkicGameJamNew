@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-public class EnemyCreatureController : MonoBehaviour
+public class Enemy2 : MonoBehaviour
 {
     // ------------------------------
     // Health Settings (Hit Count)
@@ -101,19 +101,24 @@ public class EnemyCreatureController : MonoBehaviour
     IEnumerator Attack()
     {
         isAttacking = true;
-        rb.linearVelocity = Vector2.zero;
-        animator.SetBool("Attack", true);
+        rb.linearVelocity = new Vector2(0, rb.linearVelocity.y); // Stop moving.
+        animator.SetBool("Attack", true);            // Trigger attack animation.
 
-        // Adjust this delay to match the animation's hit frame
-        yield return new WaitForSeconds(0.1f);
+        // Wait to simulate attack timing (adjust as needed).
+        yield return new WaitForSeconds(0.3f);
 
-        // Directly apply damage without rechecking distance
-        PlayerController playerController = player.GetComponent<PlayerController>();
-        if (playerController != null)
+        // Check again whether the player is still in attack range.
+        if (Vector2.Distance(transform.position, player.position) <= attackRange)
         {
-            playerController.TakeHit();
+            // Assumes the player has a method TakeHit() in its controller.
+            PlayerController playerController = player.GetComponent<PlayerController>();
+            if (playerController != null)
+            {
+                playerController.TakeHit();
+            }
         }
 
+        // Wait for the attack cooldown period.
         yield return new WaitForSeconds(attackCooldown);
         animator.SetBool("Attack", false);
         isAttacking = false;
