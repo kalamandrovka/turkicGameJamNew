@@ -98,6 +98,7 @@ public class TeleportWaypoint : MonoBehaviour
     {
         canTeleport = false;
 
+        PlayerController.LastTeleportPosition = destination.position;
         // Teleport player
         transform.position = destination.position;
 

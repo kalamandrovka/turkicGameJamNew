@@ -25,8 +25,14 @@ public class DeathTagScript : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("Enemy died");
-        // Optionally play a death animation here before destroying.
-        Destroy(gameObject);
+        if (PlayerController.LastTeleportPosition != Vector2.zero)
+        {
+            transform.position = PlayerController.LastTeleportPosition;
+        }
+        else
+        {
+            transform.position = Vector2.zero;
+        }
+
     }
 }

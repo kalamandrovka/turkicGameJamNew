@@ -82,6 +82,7 @@ public class PlayerController : MonoBehaviour
     public AudioClip heavyAttackClip;
     public AudioClip ultiAttackClip;
     public AudioClip ultiAttackClipHit;
+    public static Vector2 LastTeleportPosition = Vector2.zero;
 
     private AudioSource audioSource;
 
