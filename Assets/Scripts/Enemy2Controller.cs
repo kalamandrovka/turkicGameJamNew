@@ -142,7 +142,7 @@ public class Enemy2Controller : MonoBehaviour
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
         if (rb != null)
         {
-            rb.velocity = shootDirection * bulletSpeed;
+            rb.linearVelocity = shootDirection * bulletSpeed;
         }
         else
         {
