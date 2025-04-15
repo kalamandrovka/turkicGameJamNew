@@ -337,6 +337,7 @@ public class PlayerController : MonoBehaviour
         }
         if (collision.gameObject.CompareTag("Collectibles"))
         {
+            Destroy(collision.gameObject);
             collectibleCount++;
         }
     }

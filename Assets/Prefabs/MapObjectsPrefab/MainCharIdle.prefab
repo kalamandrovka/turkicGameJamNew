@@ -188,10 +188,21 @@ MonoBehaviour:
   heavyAttackRange: 2
   lightAttackDamage: 1
   heavyAttackDamage: 2
+  ultiAttackDamage: 5
+  ultiAttackDuration: 0.1
+  ultiAttackRange: 1.5
+  ultiRequirement: 5
+  collectibleCount: 0
   dashSpeed: 15
   dashDuration: 0.2
   dashCooldown: 1
   maxDashCharges: 2
+  lightAttackClip: {fileID: 0}
+  lightAttackClipHit: {fileID: 0}
+  heavyAttackClipHit: {fileID: 0}
+  heavyAttackClip: {fileID: 0}
+  ultiAttackClip: {fileID: 0}
+  ultiAttackClipHit: {fileID: 0}
 --- !u!50 &8620796429771747200
 Rigidbody2D:
   serializedVersion: 5

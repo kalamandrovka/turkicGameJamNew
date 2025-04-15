@@ -63,6 +63,7 @@ public class ScoreController : MonoBehaviour
         if (collision.gameObject.CompareTag("Collectibles"))
         {
             AddPowerUp();
+            
             Destroy(collision.gameObject);
         }
     }
