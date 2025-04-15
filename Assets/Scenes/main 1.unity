@@ -83980,6 +83980,22 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 2032836923}
+    - target: {fileID: 2868930755392506000, guid: 210f75c832917f04c842248446a611ba, type: 3}
+      propertyPath: m_Size.x
+      value: 0.29249638
+      objectReference: {fileID: 0}
+    - target: {fileID: 2868930755392506000, guid: 210f75c832917f04c842248446a611ba, type: 3}
+      propertyPath: m_Size.y
+      value: 0.51370376
+      objectReference: {fileID: 0}
+    - target: {fileID: 2868930755392506000, guid: 210f75c832917f04c842248446a611ba, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.35381302
+      objectReference: {fileID: 0}
+    - target: {fileID: 2868930755392506000, guid: 210f75c832917f04c842248446a611ba, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.20100702
+      objectReference: {fileID: 0}
     - target: {fileID: 3160585600276947870, guid: 210f75c832917f04c842248446a611ba, type: 3}
       propertyPath: m_Name
       value: Bringer-of-Death-SpritSheet_0 (1)
@@ -89012,6 +89028,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 330896786588398029, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
+      propertyPath: m_Size.x
+      value: 0.22551805
+      objectReference: {fileID: 0}
+    - target: {fileID: 330896786588398029, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
+      propertyPath: m_Size.y
+      value: 0.46382296
+      objectReference: {fileID: 0}
+    - target: {fileID: 330896786588398029, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0042053014
+      objectReference: {fileID: 0}
+    - target: {fileID: 330896786588398029, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.0018741414
+      objectReference: {fileID: 0}
     - target: {fileID: 962591856185031093, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
       propertyPath: m_Name
       value: MainCharIdle 1
