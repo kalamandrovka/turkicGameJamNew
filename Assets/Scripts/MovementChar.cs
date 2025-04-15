@@ -383,7 +383,7 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         Debug.Log("Player died!");
-        animator.SetTrigger("Die");
+        animator.SetBool("Die", true);
         rb.linearVelocity = Vector2.zero;
         // Optionally disable further control/input here.
         this.enabled = false;
