@@ -4,7 +4,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour
 {
     private int hitCount = 0;      // Number of hits taken.
-    private int hitLimit = 2;      // Enemy dies after 2 hits.
+    public int hitLimit = 2;      // Enemy dies after 2 hits.
     Animator animator;
     public GameObject bloodEffectPrefab;
     public GameObject bloodEffectPrefab2; // Second blood effect prefab.

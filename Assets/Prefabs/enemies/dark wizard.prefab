@@ -66,7 +66,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0.9109901, y: -2.83, z: 0}
   m_LocalScale: {x: 3.4, y: 3.4, z: 2}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8732800229650731565}
   m_Father: {fileID: 0}
@@ -145,7 +145,7 @@ MonoBehaviour:
   senseRange: 9
   attackRange: 3
   attackCooldown: 2
-  player: {fileID: 3962905023413997776, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
+  player: {fileID: 0}
 --- !u!50 &7837968275042623949
 Rigidbody2D:
   serializedVersion: 5
@@ -207,7 +207,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.006530255, y: 0.00870721}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -217,7 +217,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.4, y: 0.65}
+  m_Size: {x: 0.3259889, y: 0.5803424}
   m_EdgeRadius: 0
 --- !u!114 &6721137536204535958
 MonoBehaviour:
@@ -231,6 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51b9af1c65a31cc4f922caf0ea5272a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitLimit: 3
   bloodEffectPrefab: {fileID: 5334168495883066035, guid: 534156f9b975a2840b9b3b9d1b98182e, type: 3}
   bloodEffectPrefab2: {fileID: 2220385592387209265, guid: f884f35784e88d64d9b0697cdb63d9a8, type: 3}
   effectDuration: 0.5
@@ -289,4 +290,4 @@ MonoBehaviour:
   senseRange: 9
   attackRange: 3
   attackCooldown: 2
-  player: {fileID: 3962905023413997776, guid: 7ab7c99b236fc51479a938e1ec28c37e, type: 3}
+  player: {fileID: 0}
