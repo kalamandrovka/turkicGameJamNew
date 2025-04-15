@@ -5,41 +5,27 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/StartMenu.unity
     guid: a44da8acd4cb4f34dab654a94658781e
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StoryTelling.unity
     guid: 7a018ce14c2a75a46aa9be89c0fce117
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/main.unity
     guid: e95ef26e29ee7f342b5008ff422f4800
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-=======
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/Scenes/StoryTelling.unity
-    guid: 7a018ce14c2a75a46aa9be89c0fce117
->>>>>>> 09739e4005a3992bc7c30b81ddc07e433b6dbde0
   - enabled: 0
     path: Assets/Scenes/pppyujgt.unity
     guid: 6ed7e883956698c49b82a41575403b0d
   - enabled: 0
-<<<<<<< HEAD
     path: Assets/Scenes/pppyujgt 2.unity
     guid: 0d2efedc6a64bbb4485aaad479d20ca2
-=======
-    path: Assets/Scenes/StartMenu.unity
-    guid: a44da8acd4cb4f34dab654a94658781e
-  - enabled: 1
-    path: Assets/Scenes/main.unity
-    guid: e95ef26e29ee7f342b5008ff422f4800
->>>>>>> 09739e4005a3992bc7c30b81ddc07e433b6dbde0
+  - enabled: 0
+    path: Assets/Scenes/main 1.unity
+    guid: f807d3bdebb4aac4d99c84e8c81c4010
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

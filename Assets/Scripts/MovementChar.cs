@@ -310,7 +310,7 @@ public class PlayerController : MonoBehaviour
                 audioSource.PlayOneShot(ultiAttackClip);
             }
             StartCoroutine(ResetUlti(ultiAttackDuration));
-            StartCoroutine(StartShake(0.2f,0.4f));
+            StartCoroutine(StartShake(0.1f,0.2f));
 
         }
     }
