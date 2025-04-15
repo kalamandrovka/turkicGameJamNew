@@ -8,7 +8,7 @@ public class PlayButtonLoader : MonoBehaviour
     public void LoadGameScene()
     {
         // Replace "FirstScene" with the exact name of your main game scene.
-        SceneManager.LoadScene("StoryTelling");
+        SceneManager.LoadScene("main");
     }
 }
 
