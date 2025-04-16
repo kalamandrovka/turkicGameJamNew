@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/StoryTelling.unity
     guid: 7a018ce14c2a75a46aa9be89c0fce117
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/main.unity
     guid: e95ef26e29ee7f342b5008ff422f4800
   - enabled: 0
